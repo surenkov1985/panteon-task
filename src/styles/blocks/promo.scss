@@ -1,17 +1,21 @@
+@import "../mixins/button.scss";
+
 .promo {
     width: 100%;
     display: flex;
     justify-content: center;
 
     &__container {
-        padding: 100px 135px 50px;
+        padding: 100px 0 50px;
         display: flex;
         flex-direction: column;
-        row-gap: 100px;
+        align-items: center;
+        row-gap: 80px;
     }
 
     &__description {
         display: flex;
+        max-width: 1170px;
         justify-content: space-between;
         column-gap: 30px;
     }
@@ -19,7 +23,7 @@
     &__images {
         display: flex;
         column-gap: 30px;
-        width: 55%;
+        width: 55.2%;
 
         & .image1 {
             margin-bottom: 40px;
@@ -29,7 +33,7 @@
     }
 
     &__image {
-        width: 45%;
+        width: 51%;
         height: 100%;
 
         &>img {
@@ -37,10 +41,86 @@
             height: 100%;
             object-fit: cover;
         }
+
+        &.imaga1 {
+            margin-bottom: 40px;
+        }
+
+        &.image2 {
+            margin-top: 40px;
+        }
     }
 
     &__content {
         width: 40%;
+
+        &-title {
+            font-weight: $BoldWeight;
+            font-size: 3rem;
+            margin-top: 70px;
+        }
+
+        &-text {
+            font-size: 1.6rem;
+            font-weight: $LightWeigth;
+            margin-top: 50px;
+        }
+
+        &-control {
+            margin-top: 40px;
+        }
+
+        &-btn {
+            position: relative;
+            @include button;
+            margin-left: 10px;
+
+
+            &::before {
+                content: "";
+                z-index: -1;
+
+                @include button-border
+            }
+
+            &:hover {
+                &::before {
+                    border: none;
+                    background: $ButtonColor;
+                }
+            }
+
+        }
+    }
+
+    &__benefits {
+        width: 100%;
+
+        &-list {
+            display: flex;
+            align-items: center;
+        }
+
+
+        &-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            column-gap: 25px;
+            padding: 20px 0px 21px 25px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+
+            &:hover {
+                border-bottom: 2px solid $ButtonColor;
+            }
+
+            & p {
+                font-size: 1.8rem;
+                font-weight: $RegWeigth;
+                line-height: 28px;
+            }
+        }
     }
 
 }

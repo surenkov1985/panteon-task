@@ -1,0 +1,20 @@
+.subscriptions {
+    &__section {
+        width: 100%;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__container {
+        padding: 100px 140px;
+    }
+
+    &__title {
+        color: $DarkTextColor;
+        font-size: 3rem;
+        font-weight: $BoldWeight;
+        text-align: center;
+    }
+}

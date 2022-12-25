@@ -4,6 +4,10 @@
 
 @import "./blocks/head.scss";
 @import "./blocks/promo.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/subscriptions.scss";
+
+@import "./mixins/button.scss";
 
 * {
     font-family: $MyFont;
