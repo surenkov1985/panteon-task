@@ -1,3 +1,5 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
 @import "./utils/reset.scss";
 @import "./utils/fonts.scss";
 @import "./utils/variables.scss";
@@ -6,8 +8,10 @@
 @import "./blocks/promo.scss";
 @import "./blocks/gallery.scss";
 @import "./blocks/subscriptions.scss";
-
-@import "./mixins/button.scss";
+@import "./blocks/trainers.scss";
+@import "./blocks/questions.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
 
 * {
     font-family: $MyFont;

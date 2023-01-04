@@ -1,4 +1,439 @@
+@import "../mixins/button.scss";
+
 .subscriptions {
+    &__table {
+
+        &-head {
+            width: 100%;
+            border-bottom: 1px solid rgba(12, 20, 23, 0.5);
+
+            & th,
+            & td {
+                min-width: 200px;
+                color: $DarkTextColor;
+                padding-bottom: 15px;
+
+                & span {
+                    color: $DarkTextColor;
+                    font-size: 18px;
+                    line-height: 24px;
+                    white-space: nowrap;
+                }
+            }
+
+            & th {
+                text-align: center;
+            }
+        }
+
+        &-body {
+
+            & tr {
+                &:hover {
+                    & th {
+                        color: $ButtonColor;
+                    }
+                }
+            }
+
+            & th,
+            & td {
+                min-width: 200px;
+
+
+                & span {
+                    color: $DarkTextColor;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+
+            & td {
+                padding: 40px 20px 0;
+                text-align: center;
+                vertical-align: middle;
+                cursor: pointer;
+                transition: all 0.2s;
+
+                & span {
+                    max-width: 160px;
+                }
+
+                &:hover {
+                    font-weight: $SemiBoldWeigth;
+                }
+            }
+
+            & th {
+                vertical-align: middle;
+                padding-top: 40px;
+            }
+        }
+
+        &-all {
+            & .table {
+                margin-top: 80px;
+
+                &__head {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid rgba(12, 20, 23, 0.5);
+
+                    &-cell {
+                        min-width: 210px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $DarkTextColor;
+                        padding-bottom: 15px;
+
+                        & span {
+                            color: $DarkTextColor;
+                            font-size: 18px;
+                            line-height: 24px;
+                            white-space: nowrap;
+                            font-weight: $BoldWeight;
+                        }
+
+                        &.col-1 {
+                            & .table__body-cell.col-1:hover {
+                                color: $ButtonColor;
+                            }
+                        }
+                    }
+
+                    &-col-cell {
+                        width: 260px;
+                        color: $DarkTextColor;
+                        padding-bottom: 15px;
+
+                        & span {
+                            color: $DarkTextColor;
+                            font-size: 18px;
+                            line-height: 24px;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                &__body {
+                    margin-top: 40px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &:hover {
+                        & .table__body-head-cell {
+                            & span {
+                                color: $ButtonColor;
+                            }
+                        }
+                    }
+
+                    &-head-cell {
+                        width: 260px;
+                        display: flex;
+                        align-items: center;
+
+                        &:hover {
+                            & span {
+                                color: $DarkTextColor !important;
+                            }
+                        }
+
+                        & span {
+                            color: $DarkTextColor;
+                            font-weight: $BoldWeight;
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                    }
+
+
+
+                    &-cell {
+                        height: 100%;
+                        min-width: 210px;
+                        text-align: center;
+                        vertical-align: middle;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        & span {
+                            color: $DarkTextColor;
+                            font-size: 16px;
+                            line-height: 24px;
+                            max-width: 170px;
+                        }
+
+                        &:hover {
+                            & span {
+                                font-weight: $SemiBoldWeigth;
+                            }
+
+                            & .table__body-head-cell {
+                                & span {
+                                    color: $ButtonColor;
+                                }
+                            }
+                        }
+
+                        &.col-1 {
+                            &:hover {
+                                & .table__head-cell {
+                                    & span {
+                                        color: $ButtonColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-months {
+            & .table {
+                margin-top: 80px;
+
+                &__head {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid rgba(12, 20, 23, 0.5);
+
+                    &-cell {
+                        width: 100%;
+                        max-width: 170px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $DarkTextColor;
+                        padding-bottom: 15px;
+
+                        & span {
+                            color: $DarkTextColor;
+                            font-size: 18px;
+                            line-height: 24px;
+                            white-space: nowrap;
+                            font-weight: $BoldWeight;
+                        }
+
+                        &.col-1 {
+                            & .table__body-cell.col-1:hover {
+                                color: $ButtonColor;
+                            }
+                        }
+                    }
+
+                    &-col-cell {
+                        width: 330px;
+                        color: $DarkTextColor;
+                        padding-bottom: 15px;
+
+                        & span {
+                            color: $DarkTextColor;
+                            font-size: 18px;
+                            line-height: 24px;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                &__body {
+                    margin-top: 40px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &:hover {
+                        & .table__body-head-cell {
+                            & span {
+                                color: $ButtonColor;
+                            }
+                        }
+                    }
+
+                    &-head-cell {
+                        width: 330px;
+                        display: flex;
+                        align-items: center;
+
+                        &:hover {
+                            & span {
+                                color: $DarkTextColor !important;
+                            }
+                        }
+
+                        & span {
+                            color: $DarkTextColor;
+                            font-weight: $BoldWeight;
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                    }
+
+
+
+                    &-cell {
+                        height: 100%;
+                        width: 100%;
+                        max-width: 170px;
+                        text-align: center;
+                        vertical-align: middle;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        & span {
+                            color: $DarkTextColor;
+                            font-size: 16px;
+                            line-height: 24px;
+                            max-width: 170px;
+                        }
+
+                        &:hover {
+                            & span {
+                                font-weight: $SemiBoldWeigth;
+                            }
+
+                            & .table__body-head-cell {
+                                & span {
+                                    color: $ButtonColor;
+                                }
+                            }
+                        }
+
+                        &.col-1 {
+                            &:hover {
+                                & .table__head-cell {
+                                    & span {
+                                        color: $ButtonColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-one-time {
+            & .table {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(226px, 308px));
+                align-items: center;
+                justify-content: center;
+                column-gap: 30px;
+                margin-top: 80px;
+
+                & .card {
+                    padding: 30px 20px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &__title {
+                        font-weight: $BoldWeight;
+                        font-size: 1.6rem;
+                        color: $DarkTextColor;
+                        text-align: center;
+                        transition: all 0.2s;
+                    }
+
+                    &:hover {
+                        & .card__title {
+                            color: $ButtonColor;
+                        }
+                    }
+
+                    &__time {
+                        font-size: 1.5rem;
+                        text-align: center;
+                        font-weight: $LightWeigth;
+                        color: rgba(12, 20, 23, 0.5);
+                        margin-top: 20px;
+                    }
+
+                    &__img {
+                        margin-top: 30px;
+                    }
+
+                    &__price {
+                        margin-top: 15px;
+
+                        & span {
+                            font-weight: $BoldWeight;
+                            font-size: 3rem;
+                            color: $DarkTextColor;
+                        }
+
+                    }
+
+                    &__numb {
+                        font-size: 1.5rem;
+                        text-align: center;
+                        font-weight: $LightWeigth;
+                        color: rgba(12, 20, 23, 0.5);
+                        margin-top: 15px;
+                    }
+
+                    &__control {
+                        margin-top: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &-btn {
+                            padding: 17px 40px;
+                            min-width: 200px;
+                            color: $ButtonColor;
+                            font-size: 1.6rem;
+                            font-weight: $BoldWeight;
+                            position: relative;
+                            cursor: pointer;
+                            z-index: 1;
+
+                            &:hover {
+                                color: $TextColor;
+
+                                &::before {
+                                    background: $ButtonColor;
+                                }
+                            }
+
+                            &::before {
+                                content: "";
+                                @include button-border;
+                                border: 1px solid $ButtonColor;
+                                transition: all 0.2s;
+                                z-index: -1;
+                            }
+                        }
+                    }
+
+                    &__control-btn:hover {
+                        & .card__title {
+                            color: $ButtonColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     &__section {
         width: 100%;
         background: #FFFFFF;
@@ -17,4 +452,404 @@
         font-weight: $BoldWeight;
         text-align: center;
     }
+
+    &__table-title {
+        margin-top: 90px;
+        color: $DarkTextColor;
+        font-size: 2.4rem;
+        font-weight: $BoldWeight;
+        text-align: center;
+    }
 }
+
+// .table {
+
+//     &.subscriptions__table-all {
+//         margin-top: 80px;
+
+//         &.table {
+
+//             &__head {
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-between;
+//                 border-bottom: 1px solid rgba(12, 20, 23, 0.5);
+
+//                 &-cell {
+//                     min-width: 210px;
+//                     display: flex;
+//                     align-items: center;
+//                     justify-content: center;
+//                     color: $DarkTextColor;
+//                     padding-bottom: 15px;
+
+//                     & span {
+//                         color: $DarkTextColor;
+//                         font-size: 18px;
+//                         line-height: 24px;
+//                         white-space: nowrap;
+//                         font-weight: $BoldWeight;
+//                     }
+
+//                     &.col-1 {
+//                         & .table__body-cell.col-1:hover {
+//                             color: $ButtonColor;
+//                         }
+//                     }
+//                 }
+
+//                 &-col-cell {
+//                     width: 260px;
+//                     color: $DarkTextColor;
+//                     padding-bottom: 15px;
+
+//                     & span {
+//                         color: $DarkTextColor;
+//                         font-size: 18px;
+//                         line-height: 24px;
+//                         white-space: nowrap;
+//                     }
+//                 }
+//             }
+
+//             &__body {
+//                 margin-top: 40px;
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-between;
+
+//                 &:hover {
+//                     & .table__body-head-cell {
+//                         & span {
+//                             color: $ButtonColor;
+//                         }
+//                     }
+//                 }
+
+//                 &-head-cell {
+//                     width: 260px;
+//                     display: flex;
+//                     align-items: center;
+
+//                     &:hover {
+//                         & span {
+//                             color: $DarkTextColor !important;
+//                         }
+//                     }
+
+//                     & span {
+//                         color: $DarkTextColor;
+//                         font-weight: $BoldWeight;
+//                         font-size: 16px;
+//                         line-height: 24px;
+//                     }
+//                 }
+
+
+
+//                 &-cell {
+//                     height: 100%;
+//                     min-width: 210px;
+//                     text-align: center;
+//                     vertical-align: middle;
+//                     cursor: pointer;
+//                     transition: all 0.2s;
+//                     display: flex;
+//                     align-items: center;
+//                     justify-content: center;
+
+//                     & span {
+//                         color: $DarkTextColor;
+//                         font-size: 16px;
+//                         line-height: 24px;
+//                         max-width: 170px;
+//                     }
+
+//                     &:hover {
+//                         & span {
+//                             font-weight: $SemiBoldWeigth;
+//                         }
+
+//                         & .table__body-head-cell {
+//                             & span {
+//                                 color: $ButtonColor;
+//                             }
+//                         }
+//                     }
+
+//                     &.col-1 {
+//                         &:hover {
+//                             & .table__head-cell {
+//                                 & span {
+//                                     color: $ButtonColor;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+
+//     &.subscriptions__table-months {
+//         margin-top: 80px;
+
+//         &__head {
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             border-bottom: 1px solid rgba(12, 20, 23, 0.5);
+
+//             &-cell {
+//                 width: 100%;
+//                 max-width: 170px;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 color: $DarkTextColor;
+//                 padding-bottom: 15px;
+
+//                 & span {
+//                     color: $DarkTextColor;
+//                     font-size: 18px;
+//                     line-height: 24px;
+//                     white-space: nowrap;
+//                     font-weight: $BoldWeight;
+//                 }
+
+//                 &.col-1 {
+//                     & .table__body-cell.col-1:hover {
+//                         color: $ButtonColor;
+//                     }
+//                 }
+//             }
+
+//             &-col-cell {
+//                 width: 310px;
+//                 color: $DarkTextColor;
+//                 padding-bottom: 15px;
+
+//                 & span {
+//                     color: $DarkTextColor;
+//                     font-size: 18px;
+//                     line-height: 24px;
+//                     white-space: nowrap;
+//                 }
+//             }
+//         }
+
+//         &__body {
+//             margin-top: 40px;
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+
+//             &:hover {
+//                 & .table__body-head-cell {
+//                     & span {
+//                         color: $ButtonColor;
+//                     }
+//                 }
+//             }
+
+//             &-head-cell {
+//                 width: 310px;
+//                 display: flex;
+//                 align-items: center;
+
+//                 &:hover {
+//                     & span {
+//                         color: $DarkTextColor !important;
+//                     }
+//                 }
+
+//                 & span {
+//                     color: $DarkTextColor;
+//                     font-weight: $BoldWeight;
+//                     font-size: 16px;
+//                     line-height: 24px;
+//                 }
+//             }
+
+
+
+//             &-cell {
+//                 height: 100%;
+//                 width: 100%;
+//                 max-width: 170px;
+//                 text-align: center;
+//                 vertical-align: middle;
+//                 cursor: pointer;
+//                 transition: all 0.2s;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+
+//                 & span {
+//                     color: $DarkTextColor;
+//                     font-size: 16px;
+//                     line-height: 24px;
+//                     max-width: 170px;
+//                 }
+
+//                 &:hover {
+//                     & span {
+//                         font-weight: $SemiBoldWeigth;
+//                     }
+
+//                     & .table__body-head-cell {
+//                         & span {
+//                             color: $ButtonColor;
+//                         }
+//                     }
+//                 }
+
+//                 &.col-1 {
+//                     &:hover {
+//                         & .table__head-cell {
+//                             & span {
+//                                 color: $ButtonColor;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .subscriptions__table-all {
+//     & .table {
+//         margin-top: 80px;
+
+//         &__head {
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             border-bottom: 1px solid rgba(12, 20, 23, 0.5);
+
+//             &-cell {
+//                 min-width: 210px;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 color: $DarkTextColor;
+//                 padding-bottom: 15px;
+
+//                 & span {
+//                     color: $DarkTextColor;
+//                     font-size: 18px;
+//                     line-height: 24px;
+//                     white-space: nowrap;
+//                     font-weight: $BoldWeight;
+//                 }
+
+//                 &.col-1 {
+//                     & .table__body-cell.col-1:hover {
+//                         color: $ButtonColor;
+//                     }
+//                 }
+//             }
+
+//             &-col-cell {
+//                 width: 260px;
+//                 color: $DarkTextColor;
+//                 padding-bottom: 15px;
+
+//                 & span {
+//                     color: $DarkTextColor;
+//                     font-size: 18px;
+//                     line-height: 24px;
+//                     white-space: nowrap;
+//                 }
+//             }
+//         }
+
+//         &__body {
+//             margin-top: 40px;
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+
+//             &:hover {
+//                 & .table__body-head-cell {
+//                     & span {
+//                         color: $ButtonColor;
+//                     }
+//                 }
+//             }
+
+//             &-head-cell {
+//                 width: 260px;
+//                 display: flex;
+//                 align-items: center;
+
+//                 &:hover {
+//                     & span {
+//                         color: $DarkTextColor !important;
+//                     }
+//                 }
+
+//                 & span {
+//                     color: $DarkTextColor;
+//                     font-weight: $BoldWeight;
+//                     font-size: 16px;
+//                     line-height: 24px;
+//                 }
+//             }
+
+
+
+//             &-cell {
+//                 height: 100%;
+//                 min-width: 210px;
+//                 text-align: center;
+//                 vertical-align: middle;
+//                 cursor: pointer;
+//                 transition: all 0.2s;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+
+//                 & span {
+//                     color: $DarkTextColor;
+//                     font-size: 16px;
+//                     line-height: 24px;
+//                     max-width: 170px;
+//                 }
+
+//                 &:hover {
+//                     & span {
+//                         font-weight: $SemiBoldWeigth;
+//                     }
+
+//                     // & .table__body-head-cell {
+//                     //     color: $ButtonColor;
+//                     // }
+//                     & .table__body-head-cell {
+//                         & span {
+//                             color: $ButtonColor;
+//                         }
+//                     }
+//                 }
+
+//                 &.col-1 {
+//                     &:hover {
+//                         & .table__head-cell {
+//                             & span {
+//                                 color: $ButtonColor;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
