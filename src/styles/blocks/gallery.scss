@@ -9,6 +9,10 @@
         flex-direction: column;
         align-items: center;
         row-gap: 80px;
+
+        @media (max-width: 1080px) {
+            padding: 50px 15px 100px;
+        }
     }
 
     &__title {
@@ -40,7 +44,8 @@
     }
 
     &__content {
-        width: 100%;
+        // width: 100%;
+        width: max-content;
         display: flex;
         align-items: center;
         overflow-x: hidden;
@@ -49,7 +54,7 @@
     }
 
     &__photo {
-        min-width: 268px;
+        // min-width: 268px;
         height: 100%;
 
         &:not(:first-child) {
@@ -85,8 +90,6 @@
             width: 25%;
             background: $ButtonColor;
             cursor: pointer;
-            // margin-left: 50px;
-            // margin-right: 50px;
             margin-top: -3px;
         }
 
