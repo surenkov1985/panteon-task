@@ -1,12 +1,8 @@
+import $ from "jquery";
+
 ymaps.ready(function () {
 	let myMap = new ymaps.Map("map", {
-		// Координаты центра карты.
-		// Порядок по умолчанию: «широта, долгота».
-		// Чтобы не определять координаты центра карты вручную,
-		// воспользуйтесь инструментом Определение координат.
 		center: [55.80570717404386, 38.983969757672],
-		// Уровень масштабирования. Допустимые значения:
-		// от 0 (весь мир) до 19.
 		zoom: 17,
 	});
 	myMap.behaviors.disable("scrollZoom");
@@ -22,12 +18,32 @@ ymaps.ready(function () {
 		{
 			iconLayout: "default#image",
 			iconImageHref: "./styles/images/Frame.png",
-			iconImageSize: [38, 59], // указываем размер изображения
-			iconImageOffset: [-19, -38], // обозначаем сдвиг от левого верхнего угла к точке изображения метки .
+			iconImageSize: [38, 59],
+			iconImageOffset: [-19, -38],
 		},
-		{
-			// preset: "default#image",
-		}
+		{}
 	);
 	myMap.geoObjects.add(placemark);
+	let newcoord = myMap.getGlobalPixelCenter();
+
+	
+	if ($(window).innerWidth() < 1200) {
+		newcoord[0] -= 150;
+	}
+
+	if ($(window).innerWidth() < 550) {
+		newcoord[0] += 150;
+	}
+
+	$(window).on("resize", function (e) {
+		if ($(window).innerWidth() < 1200) {
+			newcoord[0] -= 150;
+		}
+
+		if ($(window).innerWidth() < 550) {
+			newcoord[0] += 150;
+		}
+	});
+
+	myMap.setGlobalPixelCenter(newcoord);
 });

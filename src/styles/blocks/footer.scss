@@ -1,12 +1,27 @@
 .foot {
     display: flex;
     justify-content: center;
+    background: #000000;
 
     &__container {
         padding: 50px 60px;
         display: flex;
         justify-content: space-between;
-        column-gap: 110px;
+
+        @media (max-width: 1200px) {
+            padding: 50px 30px;
+        }
+
+        @media (max-width: 991px) {
+            padding: 50px 15px;
+        }
+
+    }
+
+    &__menu {
+        column-gap: 60px;
+        row-gap: 30px;
+        justify-content: space-between;
     }
 
     &__logo-container {
@@ -68,13 +83,16 @@
 }
 
 .site-map {
-    width: 100%;
+    // width: 100%;
+    max-width: 660px;
 
     &__nav-list {
         width: 100%;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        column-gap: 10px;
+        row-gap: 10px;
     }
 
     &__list {

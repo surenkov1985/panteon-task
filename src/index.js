@@ -8,8 +8,8 @@ import "./styles/style.scss";
 // javascript
 
 import "./js/yandex-map";
+import "./js/sliders-control"
 
-console.log("hello!");
 
 $(".toggler-icon").on("click", function () {
 	$(this).toggleClass("active");

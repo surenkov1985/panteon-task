@@ -44,7 +44,6 @@
     }
 
     &__content {
-        // width: 100%;
         width: max-content;
         display: flex;
         align-items: center;
@@ -54,8 +53,16 @@
     }
 
     &__photo {
-        // min-width: 268px;
+        width: 268px;
         height: 100%;
+
+        @media (max-width: 768px) {
+            width: 308px;
+        }
+
+        @media (max-width: 350px) {
+            width: 200px;
+        }
 
         &:not(:first-child) {
             margin-left: 30px;
@@ -130,7 +137,7 @@
 
     &.slider2 {
         & .slider__photo {
-            min-width: 362px;
+            width: 362px;
             height: 100%;
 
             &:not(:first-child) {

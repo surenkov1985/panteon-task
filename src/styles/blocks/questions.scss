@@ -26,6 +26,14 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
+        @media (max-width: 991px) {
+            padding: 100px 15px 120px;
+        }
+
+        @media (max-width: 500px) {
+            padding: 80px 15px;
+        }
     }
 }
 
@@ -39,6 +47,9 @@
         font-size: 2.4rem;
         font-weight: $BoldWeight;
 
+        @media (max-width: 500px) {
+            font-size: 2rem;
+        }
     }
 
     &__description {
@@ -47,10 +58,18 @@
         font-weight: $RegWeigth;
         margin-top: 25px;
 
+        @media (max-width: 500px) {
+            font-size: 1.6rem;
+        }
+
         & span {
             font-size: 1.8rem;
             font-weight: $RegWeigth;
             color: $ButtonColor;
+
+            @media (max-width: 500px) {
+                font-size: 1.6rem;
+            }
         }
     }
 
