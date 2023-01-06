@@ -1,0 +1,114 @@
+.decor {
+    transform: rotate(52deg) matrix(1.00, 0.00, -0.80, 1.00, 0, 0);
+    position: absolute;
+
+    &-yellow {
+        background: $ButtonColor;
+
+        &-1 {
+            width: 250px;
+            height: 36px;
+            top: 3%;
+            right: 11%;
+        }
+
+        &-2 {
+            width: 303px;
+            height: 50px;
+            top: 65%;
+            left: -7%;
+        }
+
+        &-3 {
+            width: 286px;
+            height: 57px;
+            bottom: 7%;
+            left: -8%;
+        }
+
+        &-4 {
+            width: 280px;
+            height: 37px;
+            top: 13%;
+            left: -8%;
+        }
+
+        &-5 {
+            transform: rotate(308deg) matrix(1, 0, 0.8, 1, 0, 0);
+            width: 284px;
+            height: 10px;
+            top: 30%;
+            right: -13%;
+        }
+    }
+
+    &-gray {
+        background: rgba(12, 20, 23, 0.9);
+
+        &-1 {
+            width: 252px;
+            height: 44px;
+            top: 31%;
+            right: -7%;
+            transform: rotate(308deg) matrix(1, 0, 0.8, 1, 0, 0);
+        }
+
+        &-2 {
+            width: 238px;
+            height: 46px;
+            bottom: 41%;
+            left: -9%;
+        }
+    }
+
+    &-y-border {
+        border: 1px solid $ButtonColor;
+
+        &-1 {
+            width: 251px;
+            height: 40px;
+            top: 29%;
+            right: -7%;
+            transform: rotate(308deg) matrix(1, 0, 0.8, 1, 0, 0);
+        }
+
+        &-2 {
+            width: 265px;
+            height: 57px;
+            bottom: 40%;
+            left: -7%;
+        }
+    }
+
+    &-border {
+        border: 1px solid $TextColor;
+
+        &-1 {
+            width: 250px;
+            height: 36px;
+            top: -1%;
+            right: 14%;
+        }
+
+        &-2 {
+            width: 250px;
+            height: 43px;
+            top: 81%;
+            left: -7%;
+        }
+
+        &-3 {
+            width: 260px;
+            height: 35px;
+            bottom: 12%;
+            left: -12%;
+        }
+
+        &-4 {
+            width: 254px;
+            height: 35px;
+            top: 10%;
+            left: -10%;
+        }
+    }
+}

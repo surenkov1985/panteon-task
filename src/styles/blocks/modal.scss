@@ -1,0 +1,111 @@
+.modal {
+
+    &-dialog {
+        width: 100%;
+        max-width: 900px;
+    }
+
+    &-content {
+        padding: 50px 50px 110px;
+        width: 100%;
+        max-width: 900px;
+        background: #0C1417 !important;
+
+        @media (max-width: 550px) {
+            padding: 20px 10px;
+        }
+    }
+
+
+    &-header {
+        border: none;
+        padding: 0;
+
+        & .logo {
+            @media (max-width: 550px) {
+                width: 150px;
+            }
+
+
+            & svg {
+                width: 100%;
+            }
+        }
+    }
+
+    &-body {
+        margin-top: 40px;
+        padding: 0;
+        row-gap: 30px;
+    }
+
+    &-title {
+        column-gap: 20px;
+
+        & span {
+            font-size: 3rem;
+            font-weight: $BoldWeight;
+
+            @media (max-width: 550px) {
+                font-size: 2rem;
+
+                & svg {
+                    width: 27px;
+                }
+            }
+        }
+    }
+
+    &-text {
+        font-size: 2rem;
+        font-weight: $BoldWeight;
+
+        @media (max-width: 550px) {
+            font-size: 1.8rem;
+        }
+    }
+
+    & .close {
+        min-width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        margin-left: auto;
+
+        @media (max-width: 550px) {
+            min-width: 20px;
+            height: 20px;
+        }
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-contacts {
+
+        &-list {
+            column-gap: 25px;
+            row-gap: 20px;
+        }
+
+
+        &-item-text {
+            font-size: 1.5rem;
+
+            @media (max-width: 550px) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &-social-text {
+            font-size: 1.6rem;
+            font-weight: $RegWeigth;
+
+            @media (max-width: 550px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
