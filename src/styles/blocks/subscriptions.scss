@@ -2,6 +2,10 @@
 
 .subscriptions {
 
+    &__section {
+        position: relative;
+    }
+
     &__range {
         width: 95%;
         max-width: 1000px;
@@ -31,76 +35,15 @@
     }
 
     &__table {
+        padding: 10px 0;
+        overflow-x: hidden;
 
-        // &-head {
-        //     width: 100%;
-        //     border-bottom: 1px solid rgba(12, 20, 23, 0.5);
-
-        //     & th,
-        //     & td {
-        //         min-width: 200px;
-        //         color: $DarkTextColor;
-        //         padding-bottom: 15px;
-
-        //         & span {
-        //             color: $DarkTextColor;
-        //             font-size: 18px;
-        //             line-height: 24px;
-        //             white-space: nowrap;
-        //         }
-        //     }
-
-        //     & th {
-        //         text-align: center;
-        //     }
-        // }
-
-        // &-body {
-
-        //     & tr {
-        //         &:hover {
-        //             & th {
-        //                 color: $ButtonColor;
-        //             }
-        //         }
-        //     }
-
-        //     & th,
-        //     & td {
-        //         min-width: 200px;
-
-
-        //         & span {
-        //             color: $DarkTextColor;
-        //             font-size: 16px;
-        //             line-height: 24px;
-        //         }
-        //     }
-
-        //     & td {
-        //         padding: 40px 20px 0;
-        //         text-align: center;
-        //         vertical-align: middle;
-        //         cursor: pointer;
-        //         transition: all 0.2s;
-
-        //         & span {
-        //             max-width: 160px;
-        //         }
-
-        //         &:hover {
-        //             font-weight: $SemiBoldWeigth;
-        //         }
-        //     }
-
-        //     & th {
-        //         vertical-align: middle;
-        //         padding-top: 40px;
-        //     }
-        // }
+        &-container {
+            width: 100%;
+            overflow-x: hidden;
+        }
 
         &-all {
-            overflow: hidden;
 
             & .table {
                 margin-top: 80px;
@@ -267,7 +210,6 @@
         }
 
         &-months {
-            overflow: hidden;
 
             & .table {
                 margin-top: 80px;

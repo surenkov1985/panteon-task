@@ -8,9 +8,11 @@ import "./styles/style.scss";
 // javascript
 
 import "./js/yandex-map";
-import "./js/sliders-control"
+import "./js/sliders-control";
+import "./js/scroll-listeners";
 
-
-$(".toggler-icon").on("click", function () {
-	$(this).toggleClass("active");
+$(".toggler-icon").each(function (_, btn) {
+	$(btn).on("click", function () {
+		$(this).toggleClass("active");
+	});
 });

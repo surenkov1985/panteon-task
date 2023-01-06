@@ -1,175 +1,149 @@
 import $ from "jquery";
 
-// Slider 1 variables
+// Gallery controls
 
-const slider1 = $(".slider1");
-const slider1Container = $(slider1).find(".slider__container");
-const slider1Content = $(slider1).find(".slider__content");
-const slider1Control = $(slider1).find(".slider__btn");
-const slider1Range = $(slider1).find(".slider__range");
-let slider1Event = null;
+$(document).ready(function (e) {
+	$(".slider").each(function (_, slider) {
+		const sliderContainer = $(slider).find(".slider__container");
+		const sliderContent = $(slider).find(".slider__content");
+		const sliderControl = $(slider).find(".slider__btn");
+		const sliderRange = $(slider).find(".slider__range");
+		let sliderEvent = null;
 
-let slider1Width = $(slider1Content).innerWidth();
-let slider1ContainerWidth = $(slider1Container).innerWidth();
-$(slider1Range).attr("max", Math.floor(slider1Width / slider1ContainerWidth));
-let scroll1Left;
-let slider1Animated = false;
+		let sliderWidth = $(sliderContent).innerWidth();
+		let sliderContainerWidth = $(sliderContainer).innerWidth();
+		$(sliderRange).attr("max", Math.floor(sliderWidth / sliderContainerWidth));
+		let scrollLeft;
+		let sliderAnimated = false;
 
-// slider 2 variables
+		$(window).on("resize", function (e) {
+			sliderWidth = $(sliderContent).innerWidth();
+			sliderContainerWidth = $(sliderContainer).innerWidth();
+			$(sliderRange).attr("max", Math.ceil(sliderWidth / sliderContainerWidth));
+		});
 
-const slider2 = $(".slider2");
-const slider2Container = $(slider2).find(".slider__container");
-const slider2Content = $(slider2).find(".slider__content");
-const slider2Control = $(slider2).find(".slider__btn");
-const slider2Range = $(slider2).find(".slider__range");
-let slider2Event = null;
-let slider2Animated = false;
+		$(sliderRange).on("change, input", function (e) {
+			$(sliderContainer).animate(
+				{
+					scrollLeft: sliderContainerWidth * Number(e.target.value),
+				},
+				500
+			);
+		});
 
-let slider2Width = $(slider2Content).innerWidth();
-let slider2ContainerWidth = $(slider2Container).innerWidth();
-$(slider2Range).attr("max", Math.floor(slider2Width / slider2ContainerWidth));
-let scroll2Left;
+		$(sliderControl).each((_, btn) => {
+			$(btn).on("click", function (e) {
+				if (e.currentTarget.classList.contains("btn-left")) {
+					scrollLeft = $(sliderContainer).scrollLeft() - sliderContainerWidth;
+				}
+				if (e.currentTarget.classList.contains("btn-right")) {
+					scrollLeft = $(sliderContainer).scrollLeft() + sliderContainerWidth;
+				}
 
-$(window).on("resize", function (e) {
-	slider1Width = $(slider1Content).innerWidth();
-	slider1ContainerWidth = $(slider1Container).innerWidth();
-	$(slider1Range).attr("max", Math.ceil(slider1Width / slider1ContainerWidth));
+				$(sliderContainer).animate(
+					{
+						scrollLeft: scrollLeft,
+					},
+					500
+				);
+				$(sliderRange).attr("value", Math.ceil(scrollLeft / sliderContainerWidth));
+			});
+		});
 
-	slider2Width = $(slider2Content).innerWidth();
-	slider2ContainerWidth = $(slider2Container).innerWidth();
-	$(slider2Range).attr("max", Math.ceil(slider2Width / slider2ContainerWidth));
-});
+		$(sliderContent).on("touchstart", function (e) {
+			sliderEvent = e;
+		});
 
-// Slider 1 listeners
+		$(sliderContent).on("touchmove", function (e) {
+			if (sliderAnimated) return;
 
-$(slider1Range).on("change, input", function (e) {
-	$(slider1Container).animate(
-		{
-			scrollLeft: slider1ContainerWidth * Number(e.target.value),
-		},
-		500
-	);
-});
+			if (sliderEvent.touches[0].pageX > e.touches[0].pageX) {
+				sliderAnimated = true;
+				scrollLeft = $(sliderContainer).scrollLeft() + sliderContainerWidth;
 
-$(slider1Control).each((_, btn) => {
-	$(btn).on("click", function (e) {
-		if (e.currentTarget.classList.contains("btn-left")) {
-			scroll1Left = $(slider1Container).scrollLeft() - slider1ContainerWidth;
-		}
-		if (e.currentTarget.classList.contains("btn-right")) {
-			scroll1Left = $(slider1Container).scrollLeft() + slider1ContainerWidth;
-		}
+				$(sliderRange).attr("value", Math.ceil(scrollLeft / sliderContainerWidth));
+			}
+			if (sliderEvent.touches[0].pageX < e.touches[0].pageX) {
+				sliderAnimated = true;
+				scrollLeft = $(sliderContainer).scrollLeft() - sliderContainerWidth;
 
-		$(slider1Container).animate(
-			{
-				scrollLeft: scroll1Left,
-			},
-			500
-		);
-		$(slider1Range).attr("value", Math.ceil(scroll1Left / slider1ContainerWidth));
+				$(sliderRange).attr("value", Math.ceil(scrollLeft / sliderContainerWidth));
+			}
+
+			$(sliderContainer).animate(
+				{
+					scrollLeft: scrollLeft,
+				},
+				500,
+				function () {
+					sliderAnimated = false;
+				}
+			);
+		});
+
+		$(sliderContent).on("touchend", function (e) {
+			sliderEvent = null;
+			sliderAnimated = false;
+		});
 	});
-});
 
-$(slider1Content).on("touchstart", function (e) {
-	console.log(e);
-	slider1Event = e;
-});
+	// Tables Control
 
-$(slider1Content).on("touchmove", function (e) {
-	if (slider1Animated) return;
+	$(".subscriptions__table").each(function (_, table) {
+		const tableContent = $(table).find(".table");
+		const tableContainer = $(table).find(".subscriptions__table-container");
+		const tableRange = $(table).find(".subscriptions__range");
+		let tableEvent = null;
 
-	if (slider1Event.touches[0].pageX > e.touches[0].pageX) {
-		slider1Animated = true;
-		scroll1Left = $(slider1Container).scrollLeft() + slider1ContainerWidth;
+		let tableWidth = $(tableContent).innerWidth();
+		let tableContainerWidth = $(tableContainer).innerWidth();
+		$(tableRange).attr("max", Math.floor(tableWidth / tableContainerWidth));
+		let scrollLeft;
+		let tableAnimated = false;
 
-		$(slider1Range).attr("value", Math.ceil(scroll1Left / slider1ContainerWidth));
-	}
-	if (slider1Event.touches[0].pageX < e.touches[0].pageX) {
-		slider1Animated = true;
-		scroll1Left = $(slider1Container).scrollLeft() - slider1ContainerWidth;
+		$(tableRange).on("change, input", function (e) {
+			$(tableContainer).animate(
+				{
+					scrollLeft: tableContainerWidth * Number(e.target.value),
+				},
+				500
+			);
+		});
 
-		$(slider1Range).attr("value", Math.ceil(scroll1Left / slider1ContainerWidth));
-	}
+		$(tableContent).on("touchstart", function (e) {
+			tableEvent = e;
+		});
 
-	$(slider1Container).animate(
-		{
-			scrollLeft: scroll1Left,
-		},
-		500,
-		function () {
-			slider1Animated = false;
-		}
-	);
-});
+		$(tableContent).on("touchmove", function (e) {
+			if (tableAnimated) return;
 
-$(slider1Content).on("touchend", function (e) {
-	slider1Event = null;
-	slider1Animated = false;
-});
+			if (tableEvent.touches[0].pageX > e.touches[0].pageX) {
+				tableAnimated = true;
+				scrollLeft = $(table).scrollLeft() + tableContainerWidth;
 
-//  Slider 2 listeners
+				$(tableRange).attr("value", Math.ceil(scrollLeft / tableContainerWidth));
+			}
+			if (tableEvent.touches[0].pageX < e.touches[0].pageX) {
+				tableAnimated = true;
+				scrollLeft = $(table).scrollLeft() - tableContainerWidth;
 
-$(slider2Range).on("change, input", function (e) {
-	$(slider2Container).animate(
-		{
-			scrollLeft: slider2ContainerWidth * Number(e.target.value),
-		},
-		500
-	);
-});
+				$(tableRange).attr("value", Math.ceil(scrollLeft / tableContainerWidth));
+			}
 
-$(slider2Control).each((_, btn) => {
-	$(btn).on("click", function (e) {
-		if (e.currentTarget.classList.contains("btn-left")) {
-			scroll2Left = $(slider2Container).scrollLeft() - slider2ContainerWidth;
-		}
-		if (e.currentTarget.classList.contains("btn-right")) {
-			scroll2Left = $(slider2Container).scrollLeft() + slider2ContainerWidth;
-		}
+			$(tableContainer).animate(
+				{
+					scrollLeft: scrollLeft,
+				},
+				500,
+				function () {
+					tableAnimated = false;
+				}
+			);
+		});
 
-		$(slider2Container).animate(
-			{
-				scrollLeft: scroll2Left,
-			},
-			500
-		);
-		$(slider2Range).attr("value", Math.ceil(scroll2Left / slider2ContainerWidth));
+		$(tableContent).on("touchend", function (e) {
+			tableEvent = null;
+			tableAnimated = false;
+		});
 	});
-});
-
-$(slider2Content).on("touchstart", function (e) {
-	console.log(e);
-	slider2Event = e;
-});
-
-$(slider2Content).on("touchmove", function (e) {
-	if (slider2Animated) return;
-
-	if (slider2Event.touches[0].pageX > e.touches[0].pageX) {
-		slider2Animated = true;
-		scroll2Left = $(slider2Container).scrollLeft() + slider2ContainerWidth;
-
-		$(slider2Range).attr("value", Math.ceil(scroll2Left / slider2ContainerWidth));
-	}
-	if (slider2Event.touches[0].pageX < e.touches[0].pageX) {
-		slider2Animated = true;
-		scroll2Left = $(slider2Container).scrollLeft() - slider2ContainerWidth;
-
-		$(slider2Range).attr("value", Math.ceil(scroll2Left / slider2ContainerWidth));
-	}
-
-	$(slider2Container).animate(
-		{
-			scrollLeft: scroll2Left,
-		},
-		500,
-		function () {
-			slider2Animated = false;
-		}
-	);
-});
-
-$(slider2Content).on("touchend", function (e) {
-	slider2Event = null;
-	slider2Animated = false;
 });
