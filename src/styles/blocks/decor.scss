@@ -1,6 +1,7 @@
 .decor {
     transform: rotate(52deg) matrix(1.00, 0.00, -0.80, 1.00, 0, 0);
     position: absolute;
+    z-index: 0;
 
     &-yellow {
         background: $ButtonColor;
@@ -10,6 +11,18 @@
             height: 36px;
             top: 3%;
             right: 11%;
+
+            @media (max-width: 900px) {
+                height: 25px;
+                right: 27%;
+                top: -3%;
+            }
+
+            @media (max-width: 550px) {
+                height: 19px;
+                right: 19%;
+                top: -3%;
+            }
         }
 
         &-2 {
@@ -17,6 +30,18 @@
             height: 50px;
             top: 65%;
             left: -7%;
+
+            @media (max-width: 900px) {
+                height: 40px;
+                top: 55%;
+                left: -15%;
+            }
+
+            @media (max-width: 550px) {
+                height: 25px;
+                top: 70%;
+                left: -60%;
+            }
         }
 
         &-3 {
@@ -24,6 +49,17 @@
             height: 57px;
             bottom: 7%;
             left: -8%;
+
+            @media (max-width: 900px) {
+                bottom: 7%;
+                left: -14%;
+            }
+
+            @media (max-width: 550px) {
+                height: 33px;
+                bottom: 7%;
+                left: -45%;
+            }
         }
 
         &-4 {
@@ -31,6 +67,18 @@
             height: 37px;
             top: 13%;
             left: -8%;
+
+            @media (max-width: 900px) {
+                top: 16%;
+                left: -19%;
+
+            }
+
+            @media (max-width: 550px) {
+                height: 25px;
+                top: 17%;
+                left: -56%;
+            }
         }
 
         &-5 {
@@ -39,6 +87,41 @@
             height: 10px;
             top: 30%;
             right: -13%;
+
+            @media (max-width: 900px) {
+                height: 7px;
+                right: -25%;
+                top: 33%;
+            }
+
+            @media (max-width: 550px) {
+                height: 4px;
+                right: -67%;
+                top: 23%;
+            }
+        }
+
+        &-6 {
+            width: 283px;
+            height: 35px;
+            bottom: 41%;
+            left: -11%;
+
+            @media (max-width: 900px) {
+                bottom: 32%;
+                left: -10%;
+            }
+
+            @media (max-width: 767px) {
+                height: 15px;
+                bottom: 22%;
+                left: -19%;
+            }
+
+            @media (max-width: 550px) {
+                bottom: 11%;
+                left: -50%;
+            }
         }
     }
 
@@ -51,6 +134,19 @@
             top: 31%;
             right: -7%;
             transform: rotate(308deg) matrix(1, 0, 0.8, 1, 0, 0);
+
+            @media (max-width: 900px) {
+                height: 25px;
+                right: -17%;
+                top: 34%;
+            }
+
+            @media (max-width: 550px) {
+                width: 235px;
+                height: 15px;
+                right: -47%;
+                top: 24%;
+            }
         }
 
         &-2 {
@@ -58,6 +154,17 @@
             height: 46px;
             bottom: 41%;
             left: -9%;
+
+            @media (max-width: 900px) {
+                bottom: 36%;
+                left: -16%;
+            }
+
+            @media (max-width: 550px) {
+                height: 15px;
+                bottom: 54%;
+                left: -47%;
+            }
         }
     }
 
@@ -70,6 +177,18 @@
             top: 29%;
             right: -7%;
             transform: rotate(308deg) matrix(1, 0, 0.8, 1, 0, 0);
+
+            @media (max-width: 900px) {
+                height: 19px;
+                right: -17%;
+                top: 33%;
+            }
+
+            @media (max-width: 550px) {
+                height: 15px;
+                right: -52%;
+                top: 23%;
+            }
         }
 
         &-2 {
@@ -77,6 +196,17 @@
             height: 57px;
             bottom: 40%;
             left: -7%;
+
+            @media (max-width: 900px) {
+                bottom: 35%;
+                left: -13%;
+            }
+
+            @media (max-width: 550px) {
+                height: 18px;
+                bottom: 54%;
+                left: -47%;
+            }
         }
     }
 
@@ -88,6 +218,18 @@
             height: 36px;
             top: -1%;
             right: 14%;
+
+            @media (max-width: 900px) {
+                height: 25px;
+                right: 26%;
+                top: -7%;
+            }
+
+            @media (max-width: 550px) {
+                height: 19px;
+                right: 19%;
+                top: -7%;
+            }
         }
 
         &-2 {
@@ -95,6 +237,18 @@
             height: 43px;
             top: 81%;
             left: -7%;
+
+            @media (max-width: 900px) {
+                height: 40px;
+                top: 70%;
+                left: -15%;
+            }
+
+            @media (max-width: 550px) {
+                height: 20px;
+                top: 77%;
+                left: -55%;
+            }
         }
 
         &-3 {
@@ -102,6 +256,17 @@
             height: 35px;
             bottom: 12%;
             left: -12%;
+
+            @media (max-width: 900px) {
+                bottom: 10%;
+                left: -20%;
+            }
+
+            @media (max-width: 550px) {
+                height: 20px;
+                bottom: 11%;
+                left: -55%;
+            }
         }
 
         &-4 {
@@ -109,6 +274,43 @@
             height: 35px;
             top: 10%;
             left: -10%;
+
+            @media (max-width: 900px) {
+                top: 17%;
+                left: -19%;
+
+            }
+
+            @media (max-width: 550px) {
+                height: 24px;
+                top: 19%;
+                left: -53%;
+            }
+        }
+
+        &-6 {
+            width: 254px;
+            height: 35px;
+            bottom: 47%;
+            left: -15%;
+
+            @media (max-width: 900px) {
+                bottom: 41%;
+                left: -16%;
+            }
+
+            @media (max-width: 767px) {
+                height: 15px;
+                bottom: 22%;
+                left: -19%;
+
+            }
+
+            @media (max-width: 550px) {
+                bottom: 23%;
+                left: -63%;
+            }
+
         }
     }
 }

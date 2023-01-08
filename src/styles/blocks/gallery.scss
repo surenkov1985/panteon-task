@@ -87,6 +87,10 @@
         max-width: 1000px;
         appearance: none;
 
+        @media (max-width: 900px) {
+            max-width: 600px;
+        }
+
         &::-webkit-slider-runnable-track {
             height: 4px;
             border-radius: 1px;

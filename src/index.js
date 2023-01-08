@@ -16,3 +16,7 @@ $(".toggler-icon").each(function (_, btn) {
 		$(this).toggleClass("active");
 	});
 });
+
+$(".questions__form").on("submit", function (e) {
+	e.preventDefault();
+});
