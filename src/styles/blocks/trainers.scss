@@ -1,16 +1,7 @@
 .trainers {
 
-    &__section {
-        display: flex;
-        justify-content: center;
-        position: relative;
-    }
-
     &__container {
         padding: 100px 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
 
         @media (max-width: 991px) {
             padding: 90px 15px;
@@ -22,43 +13,30 @@
     }
 
     &__content {
-        width: 100%;
-        display: flex;
-        align-items: center;
         column-gap: 55px;
     }
 
     &__title {
         margin-left: 20px;
         margin-bottom: 150px;
-        font-size: 3rem;
-        font-weight: $BoldWeight;
+        font-size: 1.875rem;
 
         @media (max-width: 500px) {
-            font-size: 2.5rem;
+            font-size: 1.56rem;
         }
     }
 
     &__slider {
-        width: 100%;
         overflow-x: hidden;
-        position: relative;
         min-height: 600px;
 
         &-list {
             width: max-content;
-            display: flex;
-            align-items: flex-start;
             column-gap: 30px;
-            position: absolute;
-
         }
 
         &-item {
-            height: 100%;
             width: 307px;
-            display: flex;
-            flex-direction: column;
 
             @media (max-width: 500px) {
                 width: 250px;
@@ -67,19 +45,12 @@
     }
 
     &__control {
-        width: 100%;
         padding-top: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         column-gap: 40px;
 
         &-btn {
             width: 26px;
             height: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             cursor: pointer;
 
             &>svg path {
@@ -99,7 +70,6 @@
     }
 
     &__range {
-        width: 100%;
         max-width: 1000px;
         appearance: none;
 
@@ -120,9 +90,6 @@
         }
 
         &-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding-top: 30px;
         }
     }
@@ -143,7 +110,7 @@
 
     &__title {
         margin-top: 20px;
-        font-size: 1.6rem;
+        font-size: 1rem;
         font-weight: $BoldWeight;
     }
 
@@ -154,7 +121,7 @@
 
         &-item {
             margin-top: 10px;
-            font-size: 1.5rem;
+            font-size: 0.9rem;
             font-weight: $LightWeigth;
             color: rgba($color: $TextColor, $alpha: 0.5);
         }

@@ -2,30 +2,20 @@
 
 .questions {
     &__section {
-        width: 100%;
-        height: 600px;
+        min-height: 600px;
         background: url("./images/questions-background.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
-        position: relative;
     }
 
     &__background {
-        width: 100%;
-        height: 100%;
         background: rgba(12, 20, 23, 0.4);
-        position: absolute;
         z-index: 10;
-        display: flex;
-        justify-content: center;
     }
 
     &__container {
         padding: 110px 170px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
 
         @media (max-width: 991px) {
             padding: 100px 15px 120px;
@@ -39,46 +29,37 @@
 
 .form {
     max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
     &__title {
-        font-size: 2.4rem;
-        font-weight: $BoldWeight;
+        font-size: 1.5rem;
 
         @media (max-width: 500px) {
-            font-size: 2rem;
+            font-size: 1.25rem;
         }
     }
 
     &__description {
-        text-align: center;
-        font-size: 1.8rem;
-        font-weight: $RegWeigth;
+        font-size: 1.125rem;
         margin-top: 25px;
 
         @media (max-width: 500px) {
-            font-size: 1.6rem;
+            font-size: 1rem;
         }
 
         & span {
-            font-size: 1.8rem;
-            font-weight: $RegWeigth;
+            font-size: 1.125rem;
             color: $ButtonColor;
 
             @media (max-width: 500px) {
-                font-size: 1.6rem;
+                font-size: 1rem;
             }
         }
     }
 
     &__input {
-        width: 100%;
         padding: 15px 0;
         border-bottom: 1px solid $TextColor;
-        font-size: 1.5rem;
-        font-weight: $LightWeigth;
+        font-size: 0.9rem;
         margin-top: 10px;
     }
 
@@ -86,8 +67,7 @@
         margin-top: 30px;
 
         &-btn {
-            font-weight: $BoldWeight;
-            font-size: 1.6rem;
+            font-size: 1rem;
             padding: 20px;
             position: relative;
             cursor: pointer;
@@ -110,14 +90,10 @@
 
     &__politic {
         margin-top: 20px;
-        display: flex;
-        justify-content: center;
 
         & a {
-            font-size: 1.4rem;
-            font-weight: $LightWeigth;
+            font-size: 0.875rem;
             color: rgba($color: $TextColor, $alpha: 0.5);
-            text-align: center;
 
         }
     }

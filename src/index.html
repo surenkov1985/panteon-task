@@ -9,34 +9,34 @@
     <title>Пантеон</title>
 </head>
 
-<body>
-    <div class="modal fade" id="modal" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark">
+<body class="w-100 h-100 min-vh-100 d-flex flex-column">
+    <div class="modal fade" id="modal" data-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog w-100 modal-dialog-centered">
+            <div class="modal-dialog w-100">
+                <div class="modal-content w-100 overflow-hidden bg-dark">
                     <div class="decor  decor-yellow decor-yellow-6"></div>
                     <div class="decor  decor-border decor-border-6"></div>
-                    <div class="modal-header d-flex">
+                    <div class="modal-header border-bottom-0 p-0 d-flex">
                         <div class="logo">
                             <a href="" class="logo__link navbar-brand">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="168" height="50" viewBox="0 0 168 50">
-                                    <image id="logo" width="168" height="50"
+                                <svg class="w-100" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="168" height="50"
+                                    viewBox="0 0 168 50">
+                                    <image width="168" height="50"
                                         xlink:href="data:img/png;base64,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" />
                                 </svg>
                             </a>
                         </div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close p-0 m-0 ml-auto" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">
-                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                <svg class="w-100 h-100" width="44" height="44" viewBox="0 0 44 44" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M42 2L22 22M2 42L22 22M22 22L2 2L42 42" stroke="white" stroke-width="3" />
                                 </svg>
                             </span>
                         </button>
                     </div>
-                    <div class="modal-body d-flex flex-column align-items-start align-items-md-center">
+                    <div class="modal-body d-flex flex-column align-items-start align-items-md-center p-0">
                         <h4 class="modal-title d-flex align-items-center">
                             <span>
                                 <svg width="40" height="30" viewBox="0 0 40 30" fill="none"
@@ -45,9 +45,9 @@
                                         stroke-width="6" />
                                 </svg>
                             </span>
-                            <span>Данные успешно отправлены</span>
+                            <span class="font-weight-bold">Данные успешно отправлены</span>
                         </h4>
-                        <p class="modal-text">Мы свяжемся с вами вближайшее время</p>
+                        <p class="modal-text font-weight-bold">Мы свяжемся с вами вближайшее время</p>
                         <div class="modal-contacts">
                             <ul class="modal-contacts-list d-flex flex-column flex-md-row">
                                 <li class="contacts__item">
@@ -74,7 +74,7 @@
                                                     fill="#F7931E" />
                                             </g>
                                             <defs>
-                                                <clipPath id="clip0_127_14">
+                                                <clipPath>
                                                     <rect width="24" height="24" fill="white" />
                                                 </clipPath>
                                             </defs>
@@ -84,7 +84,7 @@
                                 </li>
                             </ul>
                             <div class="modal-social d-flex flex-column align-items-start align-items-md-center mt-3">
-                                <p class="modal-contacts-social-text">Подписывайтесь на наши соц.сети
+                                <p class="modal-contacts-social-text font-weight-normal">Подписывайтесь на наши соц.сети
                                 </p>
                                 <ul class="contacts__social-list mt-3">
                                     <li class="contacts__social-item"><a href=""
@@ -113,39 +113,41 @@
             </div>
         </div>
     </div>
-    <header class="head">
+    <header class="head w-100 vh-100">
 
-        <div class="background head__background">
-            <div class="head__caption d-flex flex-column align-items-center">
+        <div
+            class="background head__background w-100 h-100 position-absolute d-flex flex-column align-items-center justify-content-center">
+            <div class="head__caption d-flex flex-column align-items-center position-absolute">
                 <h1 class="head__title text-center">
                     Фитнес клуб Пантеон
                 </h1>
-                <p class="head__tagline text-center">Лучше нас только боги</p>
+                <p class="head__tagline text-center font-weight-normal">Лучше нас только боги</p>
                 <button class="head__btn">
                     <span class="head__btn-text">Получить консультацию</span>
                 </button>
             </div>
-            <div class="container head__container">
+            <div class="container head__container d-flex flex-column justify-content-between position-relative h-100">
                 <div class="decor  decor-yellow decor-yellow-2"></div>
                 <div class="decor  decor-border decor-border-2"></div>
 
                 <div class="head-navbar">
                     <div class="decor  decor-yellow decor-yellow-1"></div>
                     <div class="decor  decor-border decor-border-1"></div>
-                    <nav class="head__navigation navbar navbar-expand-md navbar-dark align-items-center">
+                    <nav class="head__navigation navbar navbar-expand-md navbar-dark d-flex align-items-center">
                         <div class="head__navigation-logo">
                             <div class="logo">
                                 <a href="" class="logo__link navbar-brand">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        width="168" height="50" viewBox="0 0 168 50">
-                                        <image id="logo" width="168" height="50"
+                                    <svg class="w-100" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="168" height="50"
+                                        viewBox="0 0 168 50">
+                                        <image width="168" height="50"
                                             xlink:href="data:img/png;base64,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" />
                                     </svg>
                                 </a>
                             </div>
                         </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="nav toggle">
+                            aria-controls="navContent" aria-expanded="false" aria-label="nav toggle">
                             <span class="toggler-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="16px">
                                     <path fill-rule="evenodd" fill="#FFFFFF"
@@ -157,9 +159,10 @@
                                 </svg></span>
                         </button>
                         <div class="collapse navbar-collapse w-100 align-items-baseline mt-5 mt-md-0" id="navContent">
-                            <ul
-                                class="head__navigation-list navbar-nav d-flex d-md-none d-lg-flex ml-auto flex-row justify-content-center ">
-                                <div class="head__navigation-list head__navigation-column">
+                            <div
+                                class="head__navigation-list navbar-nav d-flex d-md-none d-lg-flex ml-auto flex-row-reverse flex-md-row  align-items-center justify-content-center ">
+                                <ul
+                                    class="head__navigation-list d-flex align-items-center flex-column flex-md-row head__navigation-column">
                                     <li class="head__navigation-item nav-item">
                                         <a href="#about" class="head__navigation-link link">О нас</a>
                                     </li>
@@ -169,8 +172,9 @@
                                     <li class="head__navigation-item nav-item">
                                         <a href="#subscriptions" class="head__navigation-link link">Абонементы</a>
                                     </li>
-                                </div>
-                                <div class="head__navigation-list head__navigation-column">
+                                </ul>
+                                <ul
+                                    class="head__navigation-list d-flex align-items-center flex-column flex-md-row head__navigation-column">
                                     <li class="head__navigation-item nav-item">
                                         <a href="#trainers" class="head__navigation-link link">Тренеры</a>
                                     </li>
@@ -182,8 +186,8 @@
                                             +7 (496) 416-19-16
                                         </a>
                                     </li>
-                                </div>
-                            </ul>
+                                </ul>
+                            </div>
                             <div class="head__navigation-phone phone ml-auto mt-4 d-none d-md-block">
                                 <a href="tel:+74964161916" class="head__navigation-link link">
                                     +7 (496) 416-19-16
@@ -214,7 +218,8 @@
                     </nav>
                 </div>
 
-                <div class="head__scroll" id="navbar-example2">
+                <div class="d-flex align-items-center justify-content-center w-100 position-relative "
+                    id="navbar-example2">
                     <a class="head__scroll-btn" href="#about">
                         <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -222,8 +227,8 @@
                                 fill="#F7931E" stroke="black" />
                         </svg>
                     </a>
-                    <div class="head__social">
-                        <ul class="head__social-list">
+                    <div class="head__social position-absolute">
+                        <ul class="head__social-list d-flex align-items-center">
                             <li class="head__social-item">
                                 <a href="" class="head__social-link instagram">
                                     <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
@@ -253,9 +258,9 @@
         </div>
     </header>
 
-    <main class="content" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-        <section id="about" class="content__section section__promo promo">
-            <div class="promo__container container">
+    <main class="content d-flex flex-column w-100 " data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+        <section id="about" class="content__section section__promo promo w-100 d-flex justify-content-center ">
+            <div class="promo__container container d-flex flex-column align-items-center">
                 <div class="promo__description row row-cols-1 row-cols-lg-2 justify-content-between">
                     <div class="promo__images col-12 col-lg-6 order-2 order-lg-0 justify-content-center">
                         <div class="row row-cols-1 row-cols-md-2">
@@ -269,13 +274,16 @@
 
                     </div>
                     <div class="promo__content col-12 col-lg-5">
-                        <h2 class="promo__content-title text-center text-lg-left">Новый образ жизни</h2>
-                        <p class="promo__content-text text-center text-lg-left">Став частью нашей команды, вы сможете
+                        <h2 class="promo__content-title text-center text-lg-left font-weight-bold">Новый образ жизни
+                        </h2>
+                        <p class="promo__content-text font-weight-light mt-5 text-center text-lg-left">Став частью нашей
+                            команды, вы сможете
                             изменить привычный ритм
                             жизни и сделать каждый свой день особенным, а формат наших
                             тренировок позволит вам раскрыть потенциал вашего тела на 100%.</p>
                         <div class="promo__content-control d-flex justify-content-center justify-content-lg-start">
-                            <button class="promo__content-btn"><span>Получить консультацию</span></button>
+                            <button class="promo__content-btn position-relative"><span>Получить
+                                    консультацию</span></button>
                         </div>
                     </div>
                 </div>
@@ -283,26 +291,27 @@
                     <ul
                         class="promo__benefits-list w-100 row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 align-items-end align-items-lg-center justify-content-center justify-content-sm-between mx-0">
                         <li class="promo__benefits-item w-100 d-flex flex-column flex-lg-row align-items-center">
-                            <svg width=" 58" height="52" viewBox="0 0 58 52" fill="none"
+                            <svg class="w-100" width=" 58" height="52" viewBox="0 0 58 52" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M53.64 43.1842C55.7712 41.6098 57.16 39.0882 57.16 36.2402C57.16 32.4194 54.7024 29.1042 51.048 27.9842L46.3952 26.557L48.5008 16.5346C52.9936 14.4546 56.36 10.365 57.4352 5.41141C57.6848 4.25301 57.4096 3.06901 56.6672 2.15381C55.9376 1.24501 54.8368 0.720215 53.6592 0.720215H53.4928C51.7648 0.720215 50.3056 1.93621 49.9536 3.67701C49.288 6.93461 46.7536 9.46901 43.5024 10.1474C42.0688 10.4418 40.9744 11.581 40.6416 12.989C40.5968 13.0722 40.5648 13.1618 40.5456 13.2578L38.2672 24.0738L18.632 18.0642L16.808 13.5202H17.8512C20.1168 13.5202 21.96 11.677 21.96 9.41141C21.96 7.48501 20.5904 5.79542 18.7088 5.38582L7.87361 3.06901C6.30561 2.72981 4.69281 3.11381 3.44481 4.12501C2.19681 5.12981 1.48001 6.63381 1.48001 8.23381C1.48001 11.1522 3.84801 13.5202 6.76641 13.5202H7.65601L9.46081 18.0386C8.16801 18.493 6.93281 19.1458 5.79361 19.9906C2.23521 22.6146 0.200012 26.6594 0.200012 31.0818C0.200012 35.8242 2.60641 40.0098 6.25441 42.4994C2.79841 43.2418 0.200012 46.3202 0.200012 50.0002C0.200012 50.7042 0.776012 51.2802 1.48001 51.2802H56.52C57.224 51.2802 57.8 50.7042 57.8 50.0002C57.8 47.037 56.1104 44.4642 53.64 43.1842ZM44.0272 12.6498C48.2768 11.7666 51.5856 8.44501 52.4624 4.18901C52.5712 3.65781 52.9936 3.28021 53.4928 3.28021H53.6592C54.2096 3.28021 54.536 3.58101 54.6768 3.76021C54.9264 4.06741 55.0224 4.47061 54.9328 4.86741C53.8192 9.99381 49.7936 14.0194 44.6672 15.133C44.2704 15.2226 43.8608 15.1266 43.5536 14.877C43.3744 14.7362 43.08 14.4162 43.08 13.885C43.08 13.2834 43.4768 12.765 44.0272 12.6498ZM42.344 17.1362C42.9584 17.5202 43.656 17.725 44.3728 17.725C44.648 17.725 44.9296 17.6994 45.2112 17.6354C45.3648 17.6034 45.5248 17.5522 45.6784 17.5138L43.9376 25.8082L40.7248 24.829L42.344 17.1362ZM6.76641 10.9602C5.26241 10.9602 4.04001 9.73781 4.04001 8.23381C4.04001 7.40821 4.41121 6.63381 5.05121 6.11541C5.54401 5.71861 6.14561 5.50741 6.76001 5.50741C6.95201 5.50741 7.14401 5.52661 7.33601 5.57141L18.1712 7.89461C18.8816 8.04181 19.4 8.68181 19.4 9.41141C19.4 10.2626 18.7024 10.9602 17.8512 10.9602H6.76641V10.9602ZM15.592 17.373C14.376 17.2258 13.16 17.245 11.9696 17.4242L10.408 13.5202H14.056L15.592 17.373ZM2.76001 31.0818C2.76001 27.4786 4.41761 24.189 7.31681 22.045C9.28801 20.5858 11.5984 19.8306 13.9664 19.8306C15.0736 19.8306 16.1872 19.997 17.288 20.3362L50.2992 30.429C52.872 31.2162 54.6 33.5522 54.6 36.2402C54.6 39.5938 51.8736 42.3202 48.52 42.3202H13.9984C7.80321 42.3202 2.76001 37.277 2.76001 31.0818ZM2.92001 48.7202C3.48961 46.5122 5.49921 44.8802 7.88001 44.8802H50.12C52.5008 44.8802 54.5104 46.5122 55.08 48.7202H2.92001ZM19.272 37.2642L21.1408 38.8258C21.16 38.8386 21.1792 38.8514 21.1984 38.8642C21.224 38.8834 21.256 38.9026 21.288 38.9218C21.3264 38.9474 21.3648 38.9666 21.4032 38.9858C21.4352 39.005 21.4672 39.0178 21.4928 39.0306C21.544 39.0498 21.5888 39.0626 21.64 39.0754C21.6656 39.0818 21.6912 39.0882 21.7232 39.0946C21.8 39.1138 21.8768 39.1202 21.96 39.1202H25.16C25.864 39.1202 26.44 38.5442 26.44 37.8402C26.44 37.1362 25.864 36.5602 25.16 36.5602H22.4208L20.9104 35.2994C21.576 34.1666 21.96 32.8482 21.96 31.4402C21.96 27.2034 18.5168 23.7602 14.28 23.7602C10.0432 23.7602 6.60001 27.2034 6.60001 31.4402C6.60001 35.677 10.0432 39.1202 14.28 39.1202C16.1872 39.1202 17.928 38.4162 19.272 37.2642ZM9.16001 31.4402C9.16001 28.6178 11.4576 26.3202 14.28 26.3202C17.1024 26.3202 19.4 28.6178 19.4 31.4402C19.4 32.221 19.2208 32.9634 18.9008 33.629L15.0992 30.4546C14.5552 30.0066 13.7488 30.077 13.2944 30.621C12.8464 31.165 12.9168 31.9714 13.4608 32.4258L17.2624 35.5938C16.424 36.2018 15.3936 36.5602 14.28 36.5602C11.4576 36.5602 9.16001 34.2626 9.16001 31.4402ZM30.28 37.8402C30.28 37.1362 30.856 36.5602 31.56 36.5602H32.84C33.544 36.5602 34.12 37.1362 34.12 37.8402C34.12 38.5442 33.544 39.1202 32.84 39.1202H31.56C30.856 39.1202 30.28 38.5442 30.28 37.8402ZM37.96 37.8402C37.96 37.1362 38.536 36.5602 39.24 36.5602H40.52C41.224 36.5602 41.8 37.1362 41.8 37.8402C41.8 38.5442 41.224 39.1202 40.52 39.1202H39.24C38.536 39.1202 37.96 38.5442 37.96 37.8402ZM45.64 37.8402C45.64 37.1362 46.216 36.5602 46.92 36.5602H48.2C48.904 36.5602 49.48 37.1362 49.48 37.8402C49.48 38.5442 48.904 39.1202 48.2 39.1202H46.92C46.216 39.1202 45.64 38.5442 45.64 37.8402Z"
                                     fill="#F7931E" />
                             </svg>
-                            <p class="text-center text-lg-left mt-lg-0">Полностью укомплектованный
+                            <p class="text-center font-weight-normal text-lg-left mt-lg-0">Полностью укомплектованный
                                 зал</p>
                         </li>
                         <li class="promo__benefits-item w-100 d-flex flex-column flex-lg-row align-items-center">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            <svg class="w-100" width="64" height="64" viewBox="0 0 64 64" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M7.2 42.4001H12V43.2001C12 44.9646 13.4355 46.4001 15.2 46.4001H20C21.7645 46.4001 23.2 44.9646 23.2 43.2001V36.8001H40.8V43.2001C40.8 44.9646 42.2355 46.4001 44 46.4001H48.8C50.5645 46.4001 52 44.9646 52 43.2001V42.4001H56.8C58.5645 42.4001 60 40.9646 60 39.2001V24.8001C60 23.0356 58.5645 21.6001 56.8 21.6001H52V20.8001C52 19.0356 50.5645 17.6001 48.8 17.6001H44C42.2355 17.6001 40.8 19.0356 40.8 20.8001V27.2001H23.2V20.8001C23.2 19.0356 21.7645 17.6001 20 17.6001H15.2C13.4355 17.6001 12 19.0356 12 20.8001V21.6001H7.2C5.43555 21.6001 4 23.0356 4 24.8001V39.2001C4 40.9646 5.43555 42.4001 7.2 42.4001ZM56.8 24.8001V39.2001H52V24.8001H56.8ZM44 20.8001H48.8V24.8001V39.2001V43.2001H44V20.8001ZM40.6 30.4001V33.6001H23.2V30.4001H40.6ZM15.2 20.8001H20L20.0005 27.2001H20V36.8001H20.0014L20.002 43.2001H15.2V39.2001V24.8001V20.8001ZM7.2 24.8001H12V39.2001H7.2V24.8001Z"
                                     fill="#F7931E" />
                             </svg>
-                            <p class="text-center text-lg-leftmt-lg-0">Профессиональное оборудование</p>
+                            <p class="text-center font-weight-normal text-lg-leftmt-lg-0">Профессиональное оборудование
+                            </p>
                         </li>
                         <li class="promo__benefits-item w-100 d-flex flex-column flex-lg-row align-items-center">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            <svg class="w-100" width="64" height="64" viewBox="0 0 64 64" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M37.3333 20.6668C37.3333 17.7202 34.9467 15.3335 32 15.3335C29.0533 15.3335 26.6667 17.7202 26.6667 20.6668C26.6667 23.6135 29.0533 26.0002 32 26.0002C34.9467 26.0002 37.3333 23.6135 37.3333 20.6668ZM29.3333 20.6668C29.3333 19.2002 30.5333 18.0002 32 18.0002C33.4667 18.0002 34.6667 19.2002 34.6667 20.6668C34.6667 22.1335 33.4667 23.3335 32 23.3335C30.5333 23.3335 29.3333 22.1335 29.3333 20.6668Z"
@@ -311,32 +320,34 @@
                                     d="M5.33334 54H58.6667C59.1333 54 59.56 53.76 59.8 53.36C60.04 52.96 60.0667 52.48 59.8533 52.0667L49.1867 30.7333C48.96 30.28 48.5067 30 48 30H39.6933C41.6667 25.64 42.6667 22.4933 42.6667 20.6667C42.6667 14.7867 37.88 10 32 10C26.12 10 21.3333 14.7867 21.3333 20.6667C21.3333 22.4933 22.3333 25.64 24.3067 30H16C15.4933 30 15.04 30.28 14.8133 30.7333L4.14667 52.0667C3.93334 52.48 3.96 52.9733 4.2 53.36C4.44 53.76 4.86667 54 5.33334 54ZM24 20.6667C24 16.2533 27.5867 12.6667 32 12.6667C36.4133 12.6667 40 16.2533 40 20.6667C40 23.72 35.9733 32.08 32 39.28C28.0267 32.08 24 23.72 24 20.6667ZM16.8267 32.6667H25.56C28.0533 37.8133 30.7333 42.4667 30.8533 42.6667C31.3333 43.4933 32.6933 43.4933 33.16 42.6667C33.28 42.4667 35.96 37.8133 38.4533 32.6667H47.1867L56.52 51.3333H7.49334L16.8267 32.6667Z"
                                     fill="#F7931E" />
                             </svg>
-                            <p class="text-center text-lg-left mt-lg-0">Удобное расположение в центре города</p>
+                            <p class="text-center font-weight-normal text-lg-left mt-lg-0">Удобное расположение в центре
+                                города</p>
                         </li>
                         <li class="promo__benefits-item w-100 d-flex flex-column flex-lg-row align-items-center">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            <svg class="w-100" width="64" height="64" viewBox="0 0 64 64" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M62.6667 53.3333C62.6667 57.016 59.6827 60 56 60H7.99999C4.31733 60 1.33333 57.016 1.33333 53.3333V14.6666C1.33333 11.7213 3.72133 9.33329 6.66666 9.33329H33.5613L44.36 5.42129C45.044 5.17196 45.8013 5.5253 46.0507 6.20663L47.188 9.33329H52C54.9453 9.33329 57.3333 11.7213 57.3333 14.6666V17.3333C60.2787 17.3333 62.6667 19.7213 62.6667 22.6666V53.3333ZM6.66666 12C5.19466 12 3.99999 13.1946 3.99999 14.6666C3.99999 16.1386 5.19466 17.3333 6.66666 17.3333H11.26H11.512C11.5293 17.3266 11.54 17.312 11.5573 17.3053L26.2 12H6.66666ZM45.4373 12.2413L44.0213 8.34263H44.02L41.2853 9.33329H41.2893L33.9373 12H33.924L19.2053 17.3333H47.288L45.4373 12.2413ZM54.6667 14.6666C54.6667 13.1946 53.472 12 52 12H48.156L50.0947 17.3333H54.6667V14.6666ZM57.3333 20H6.66666C5.69066 20 4.78666 19.7186 3.99999 19.26V53.3333C3.99999 55.5426 5.79199 57.3333 7.99999 57.3333H56C58.2093 57.3333 60 55.5426 60 53.3333V44H54.6667C51.7213 44 49.3333 41.612 49.3333 38.6666C49.3333 35.7213 51.7213 33.3333 54.6667 33.3333H60V22.6666C60 21.1946 58.8053 20 57.3333 20ZM60 41.3333V36H54.6667C53.1947 36 52 37.1946 52 38.6666C52 40.1386 53.1947 41.3333 54.6667 41.3333H60ZM54.6667 37.3333H57.3333V40H54.6667V37.3333Z"
                                     fill="#F7931E" />
                             </svg>
-                            <p class="text-center text-lg-left mt-lg-0">Доступная стоимость занятий</p>
+                            <p class="text-center font-weight-normal text-lg-left mt-lg-0">Доступная стоимость занятий
+                            </p>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section id="gallery" class="content__section section gallery">
+        <section id="gallery" class="content__section w-100 d-flex justify-content-center overflow-hidden">
 
-            <div class="gallery__container container">
+            <div class="gallery__container container d-flex flex-column align-items-center position-relative">
                 <div class="decor  decor-yellow decor-yellow-3"></div>
                 <div class="decor  decor-border decor-border-3"></div>
-                <h2 class="gallery__title">Галерея</h2>
-                <div class="gallery__content">
+                <h2 class="gallery__title font-weight-bold">Галерея</h2>
+                <div class="gallery__content w-100 d-flex flex-column">
                     <div class="gallery__content-slider slider slider1">
-                        <div class="slider__photos">
-                            <div class="slider__control d-none d-lg-flex align-items-center">
-                                <button class="slider__btn btn-left">
+                        <div class="slider__photos d-flex align-items-center justify-content-between">
+                            <div class="d-none d-lg-flex align-items-center">
+                                <button class="slider__btn d-flex align-items-center justify-content-center btn-left">
                                     <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -345,38 +356,38 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="slider__container">
-                                <div class="slider__content">
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/5382.png" alt="photo">
+                            <div class="slider__container w-100 position-relative">
+                                <div class="slider__content d-flex align-items-center">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/5382.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/STK_6966.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/STK_6966.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/STK_7858.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/STK_7858.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/STK_7899.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/STK_7899.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/5382.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/5382.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/STK_6966.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/STK_6966.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/STK_7858.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/STK_7858.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/STK_7899.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/STK_7899.png" alt="photo">
                                     </div>
                                 </div>
 
                             </div>
 
-                            <div class="slider__control d-none d-lg-flex align-items-center">
-                                <button class="slider__btn btn-right">
+                            <div class="d-none d-lg-flex align-items-center">
+                                <button class="slider__btn d-flex align-items-center justify-content-center btn-right">
                                     <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -386,14 +397,14 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="slider__range-container">
-                            <input type="range" min="0" max="3" step="1" value="0" class="slider__range">
+                        <div class="slider__range-container  d-flex align-items-center justify-content-center ">
+                            <input type="range" min="0" max="3" step="1" value="0" class="slider__range w-100">
                         </div>
                     </div>
                     <div class="gallery__content-slider slider slider2">
-                        <div class="slider__photos">
-                            <div class="slider__control d-none d-lg-flex align-items-center">
-                                <button class="slider__btn btn-left">
+                        <div class="slider__photos d-flex align-items-center justify-content-between">
+                            <div class="d-none d-lg-flex align-items-center">
+                                <button class="slider__btn d-flex align-items-center justify-content-center btn-left">
                                     <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -402,34 +413,34 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="slider__container">
-                                <div class="slider__content">
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/vladimirbelov.png" alt="photo">
+                            <div class="slider__container w-100 position-relative">
+                                <div class="slider__content d-flex align-items-center">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/vladimirbelov.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/vladimirbelov1.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/vladimirbelov1.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/vladimirbelov2.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/vladimirbelov2.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/vladimirbelov.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/vladimirbelov.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/vladimirbelov1.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/vladimirbelov1.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/vladimirbelov2.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/vladimirbelov2.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/vladimirbelov.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/vladimirbelov.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/vladimirbelov1.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/vladimirbelov1.png" alt="photo">
                                     </div>
-                                    <div class="slider__photo">
-                                        <img src="./styles/images/vladimirbelov2.png" alt="photo">
+                                    <div class="slider__photo h-100">
+                                        <img class="w-100 h-100" src="./styles/images/vladimirbelov2.png" alt="photo">
                                     </div>
 
                                 </div>
@@ -437,8 +448,8 @@
                             </div>
 
 
-                            <div class="slider__control d-none d-lg-flex align-items-center">
-                                <button class="slider__btn btn-right">
+                            <div class="d-none d-lg-flex align-items-center">
+                                <button class="slider__btn d-flex align-items-center justify-content-center btn-right">
                                     <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -448,14 +459,15 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="slider__range-container">
-                            <input type="range" min="0" max="4" step="1" value="0" class="slider__range">
+                        <div class="slider__range-container d-flex align-items-center justify-content-center ">
+                            <input type="range" min="0" max="4" step="1" value="0" class="slider__range w-100">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="subscriptions" class="subscriptions__section section">
+        <section id="subscriptions"
+            class="subscriptions__section w-100 d-flex align-items-center justify-content-center position-relative">
 
 
             <div class="subscriptions__container container">
@@ -464,57 +476,109 @@
                 <div class="decor  decor-yellow decor-yellow-5"></div>
                 <div class="decor decor-gray decor-gray-2"></div>
                 <div class="decor  decor-y-border decor-y-border-2"></div>
-                <h2 class="subscriptions__title">
+                <h2 class="subscriptions__title text-center font-weight-bold">
                     Абонементы
                 </h2>
                 <div class="subscriptions__price">
                     <div class="subscriptions__table subscriptions__table-all">
-                        <div class="subscriptions__table-container">
-                            <div class="table">
-                                <div class="table__head row-head">
-                                    <div class="table__head-col-cell"><span>Кол-во занятий</span></div>
-                                    <div class="table__head-cell"><span>1 тренировка</span></div>
-                                    <div class="table__head-cell"><span>4 тренировки</span></div>
-                                    <div class="table__head-cell"><span>8 тренировок</span></div>
-                                    <div class="table__head-cell"><span>12 тренировок</span></div>
+                        <div class="subscriptions__table-container w-100">
+                            <div class="table overflow-hidden">
+                                <div
+                                    class="table__head row-head w-100 d-flex align-items-center justify-content-start justify-content-md-between ">
+                                    <div class="table__head-col-cell pb-3 pl-3 pl-lg-0 "><span>Кол-во занятий</span>
+                                    </div>
+                                    <div
+                                        class="table__head-cell d-flex align-items-center justify-content-center pb-3 pl-3 pl-lg-0 ">
+                                        <span class="font-weight-bold">1 тренировка</span>
+                                    </div>
+                                    <div
+                                        class="table__head-cell d-flex align-items-center justify-content-center pb-3 pl-3 pl-lg-0 ">
+                                        <span class="font-weight-bold">4 тренировки</span>
+                                    </div>
+                                    <div
+                                        class="table__head-cell d-flex align-items-center justify-content-center pb-3 pl-3 pl-lg-0 ">
+                                        <span class="font-weight-bold">8 тренировок</span>
+                                    </div>
+                                    <div
+                                        class="table__head-cell d-flex align-items-center justify-content-center pb-3 pl-3 pl-lg-0 ">
+                                        <span class="font-weight-bold">12 тренировок</span>
+                                    </div>
                                 </div>
-                                <div class="table__body">
-                                    <div class="table__body-head-cell"><span>Персональный тренинг
+                                <div class="table__body w-100 d-flex align-items-center justify-content-between ">
+                                    <div class="table__body-head-cell d-flex align-items-center p-lg-3"><span
+                                            class="font-weight-bold">Персональный тренинг
                                             с инструктором</span></div>
-                                    <div class="table__body-cell"><span>700 руб.</span></div>
-                                    <div class="table__body-cell "><span>2600 руб.
-                                            (действителен в течении 3 недель)</span></div>
-                                    <div class="table__body-cell "><span>5200 руб.
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100">
+                                        <span>700 руб.</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>2600 руб.
+                                            (действителен в течении 3 недель)</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>5200 руб.
                                             (действителен в
-                                            течении 6 недель)</span></div>
-                                    <div class="table__body-cell "><span>7200 руб. (действителен в течении 10
+                                            течении 6 недель)</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>7200 руб. (действителен в течении 10
                                             недель)</span>
                                     </div>
                                 </div>
-                                <div class="table__body">
-                                    <div class="table__body-head-cell"><span>Самостоятельные тренировки
+                                <div class="table__body w-100 d-flex align-items-center justify-content-between ">
+                                    <div class="table__body-head-cell d-flex align-items-center p-lg-3"><span
+                                            class="font-weight-bold">Самостоятельные тренировки
                                             в тренажерном зале</span></div>
-                                    <div class="table__body-cell "><span>250 руб.</span></div>
-                                    <div class="table__body-cell "><span>&mdash;</span></div>
-                                    <div class="table__body-cell "><span>1500 руб.
-                                            (действителен в течении 30 дней)</span></div>
-                                    <div class="table__body-cell "><span>2000 руб.
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>250 руб.</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>&mdash;</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>1500 руб.
+                                            (действителен в течении 30 дней)</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>2000 руб.
                                             (действителен в
-                                            течении 30 дней)</span></div>
+                                            течении 30 дней)</span>
+                                    </div>
                                 </div>
-                                <div class="table__body">
-                                    <div class="table__body-head-cell"><span>Зал групповых программ</span></div>
-                                    <div class="table__body-cell "><span>300 руб.</span></div>
-                                    <div class="table__body-cell "><span>&mdash;</span></div>
-                                    <div class="table__body-cell "><span>2000 руб.
+                                <div class="table__body w-100 d-flex align-items-center justify-content-between ">
+                                    <div class="table__body-head-cell d-flex align-items-center p-lg-3"><span
+                                            class="font-weight-bold">Зал групповых программ</span></div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>300 руб.</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>&mdash;</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>2000 руб.
                                             (действителен в
-                                            течении 30 дней)</span></div>
-                                    <div class="table__body-cell "><span>2750 руб.
-                                            (действителен в течении 45 дней)</span></div>
+                                            течении 30 дней)</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>2750 руб.
+                                            (действителен в течении 45 дней)</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="subscriptions__range-container  d-flex d-sm-none">
+                        <div class="d-flex align-items-center justify-content-center d-sm-none">
                             <input type="range" min="0" max="3" step="1" value="0" class="subscriptions__range">
                         </div>
                     </div>
@@ -522,52 +586,94 @@
 
                 </div>
                 <div id="subscriptions-months" class="subscriptions__price">
-                    <h3 class="subscriptions__table-title">Абонемент по времени</h3>
-                    <div class="subscriptions__table subscriptions__table-months table">
-                        <div class="subscriptions__table-container">
-                            <div class="table">
-                                <div class="table__head row-head">
-                                    <div class="table__head-col-cell"><span>Тип карты</span></div>
-                                    <div class="table__head-cell "><span>12 месяцев</span></div>
-                                    <div class="table__head-cell "><span>6 месяцев</span></div>
-                                    <div class="table__head-cell"><span>3 месяца</span></div>
-                                    <div class="table__head-cell"><span>1 месяц</span></div>
-                                </div>
-                                <div class="table__body">
-                                    <div class="table__body-head-cell"><span>Индивидуальная,
-                                            полная без ограничения
-                                            в посещении / 8:00 – 23:00</span></div>
-                                    <div class="table__body-cell "><span>18000
-                                            (+200 мин. солярия)</span></div>
-                                    <div class="table__body-cell "><span>12000</span></div>
-                                    <div class="table__body-cell "><span>7000</span></div>
-                                    <div class="table__body-cell "><span>2500</span>
+                    <h3 class="subscriptions__table-title text-center font-weight-bold ">Абонемент по времени</h3>
+                    <div class="subscriptions__table subscriptions__table-months table overflow-hidden">
+                        <div class="subscriptions__table-container w-100">
+                            <div class="table overflow-hidden">
+                                <div
+                                    class="table__head row-head w-100 d-flex align-items-center justify-content-start justify-content-md-between">
+                                    <div class="table__head-col-cell  pb-3 pl-3 pl-lg-0 "><span>Тип карты</span></div>
+                                    <div
+                                        class="table__head-cell d-flex align-items-center justify-content-center pb-3 pl-3 pl-lg-0  ">
+                                        <spa class="font-weight-bold" n>12 месяцев</span>
+                                    </div>
+                                    <div
+                                        class="table__head-cell d-flex align-items-center justify-content-center pb-3 pl-3 pl-lg-0  ">
+                                        <spa class="font-weight-bold" n>6 месяцев</span>
+                                    </div>
+                                    <div
+                                        class="table__head-cell d-flex align-items-center justify-content-center pb-3 pl-3 pl-lg-0 ">
+                                        <span class="font-weight-bold">3 месяца</span>
+                                    </div>
+                                    <div
+                                        class="table__head-cell d-flex align-items-center justify-content-center pb-3 pl-3 pl-lg-0 ">
+                                        <span class="font-weight-bold">1 месяц</span>
                                     </div>
                                 </div>
-                                <div class="table__body">
-                                    <div class="table__body-head-cell"><span>Индивидуальная,
+                                <div class="table__body w-100 d-flex align-items-center justify-content-between ">
+                                    <div class="table__body-head-cell d-flex align-items-center p-lg-3"><span
+                                            class="font-weight-bold">Индивидуальная,
+                                            полная без ограничения
+                                            в посещении / 8:00 – 23:00</span></div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>18000
+                                            (+200 мин. солярия)</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>12000</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>7000</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>2500</span>
+                                    </div>
+                                </div>
+                                <div class="table__body w-100 d-flex align-items-center justify-content-between ">
+                                    <div class="table__body-head-cell d-flex align-items-center p-lg-3"><span
+                                            class="font-weight-bold">Индивидуальная,
                                             дневная / 8:00 – 17:00</span></div>
-                                    <div class="table__body-cell "><span>&mdash;</span></div>
-                                    <div class="table__body-cell "><span>9500</span></div>
-                                    <div class="table__body-cell "><span>5500</span></div>
-                                    <div class="table__body-cell "><span>2000</span></div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>&mdash;</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>9500</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>5500</span>
+                                    </div>
+                                    <div
+                                        class="table__body-cell text-center d-flex align-items-center justify-content-center h-100 ">
+                                        <span>2000</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="subscriptions__range-container d-flex d-sm-none">
+                        <div class="d-flex align-items-center justify-content-center d-sm-none">
                             <input type="range" min="0" max="3" step="1" value="0" class="subscriptions__range">
                         </div>
                     </div>
                 </div>
                 <div id="subscriptions-one-time" class="subscriptions__price">
-                    <h3 class="subscriptions__table-title">Разовые тренировки</h3>
+                    <h3 class="subscriptions__table-title text-center font-weight-bold ">Разовые тренировки</h3>
                     <div class="subscriptions__table-one-time">
                         <div class="table px-3">
-                            <article class="table__card">
-                                <h4 class="table__card-title">Самостоятельные тренировки в тренажерном зале</h4>
+                            <article
+                                class="table__card h-100 d-flex flex-column align-items-center justify-content-between ">
+                                <h4 class="table__card-title text-center font-weight-bold">Самостоятельные тренировки в
+                                    тренажерном зале</h4>
                                 <div
                                     class="table__card-text d-flex flex-row justify-content-center flex-md-column w-100 mt-5 mt-md-0">
-                                    <p class="table__card-time order-2 order-md-0 mt-0 my-auto my-md-0 mt-md-4 ">8:00 –
+                                    <p
+                                        class="table__card-time text-center font-weight-light order-2 order-md-0 mt-0 my-auto my-md-0 mt-md-4 ">
+                                        8:00 –
                                         23:00</p>
                                     <div
                                         class="table__card-img d-flex justify-content-center align-items-center mt-0 mt-md-5 ">
@@ -581,21 +687,25 @@
                                 </div>
 
                                 <p class="table__card-price">
-                                    <span class="table__card-price-numb">250</span><span
+                                    <span class=" font-weight-bold table__card-price-numb">250</span><span
                                         class="table__card-price-val">₽</span>
                                 </p>
-                                <p class="table__card-numb">1 тренировка</p>
-                                <div class="table__card-control">
-                                    <button class="table__card-control-btn">Узнать</button>
+                                <p class="table__card-numb text-center font-weight-light">1 тренировка</p>
+                                <div class="table__card-control d-flex align-items-center justify-content-center ">
+                                    <button
+                                        class="table__card-control-btn font-weight-bold position-relative">Узнать</button>
                                 </div>
                             </article>
-                            <article class="table__card">
-                                <h4 class="table__card-title">Персональный тренинг
+                            <article
+                                class="table__card h-100 d-flex flex-column align-items-center justify-content-between ">
+                                <h4 class="table__card-title text-center font-weight-bold">Персональный тренинг
                                     с инструктором</h4>
 
                                 <div
                                     class="table__card-text d-flex flex-row justify-content-center flex-md-column w-100 mt-5 mt-md-0">
-                                    <p class="table__card-time order-2 order-md-0 mt-0 my-auto my-md-0 mt-md-4 ">8:00 –
+                                    <p
+                                        class="table__card-time text-center font-weight-light order-2 order-md-0 mt-0 my-auto my-md-0 mt-md-4 ">
+                                        8:00 –
                                         23:00</p>
                                     <div
                                         class="table__card-img d-flex justify-content-center align-items-center mt-0 mt-md-5 ">
@@ -608,21 +718,25 @@
                                     </div>
                                 </div>
                                 <p class="table__card-price">
-                                    <span class="table__card-price-numb">700</span><span
+                                    <span class=" font-weight-bold table__card-price-numb">700</span><span
                                         class="table__card-price-val">₽</span>
                                 </p>
-                                <p class="table__card-numb">
+                                <p class="table__card-numb text-center font-weight-light">
                                     1 тренировка
                                 </p>
-                                <div class="table__card-control">
-                                    <button class="table__card-control-btn">Узнать</button>
+                                <div class="table__card-control d-flex align-items-center justify-content-center ">
+                                    <button
+                                        class="table__card-control-btn font-weight-bold position-relative">Узнать</button>
                                 </div>
                             </article>
-                            <article class="table__card">
-                                <h4 class="table__card-title">Зал групповых программ</h4>
+                            <article
+                                class="table__card h-100 d-flex flex-column align-items-center justify-content-between ">
+                                <h4 class="table__card-title text-center font-weight-bold">Зал групповых программ</h4>
                                 <div
                                     class="table__card-text d-flex flex-row justify-content-center flex-md-column w-100 mt-5 mt-md-0">
-                                    <p class="table__card-time order-2 order-md-0 mt-0 my-auto my-md-0 mt-md-4 ">график
+                                    <p
+                                        class="table__card-time text-center font-weight-light order-2 order-md-0 mt-0 my-auto my-md-0 mt-md-4 ">
+                                        график
                                         занятий уточняйте у администратора</p>
                                     <div
                                         class="table__card-img d-flex justify-content-center align-items-center mt-0 mt-md-5 ">
@@ -635,12 +749,13 @@
                                     </div>
                                 </div>
                                 <p class="table__card-price">
-                                    <span class="table__card-price-numb">300</span><span
+                                    <span class=" font-weight-bold table__card-price-numb">300</span><span
                                         class="table__card-price-val">₽</span>
                                 </p>
-                                <p class="table__card-numb">1 тренировка</p>
-                                <div class="table__card-control">
-                                    <button class="table__card-control-btn">Узнать</button>
+                                <p class="table__card-numb text-center font-weight-light">1 тренировка</p>
+                                <div class="table__card-control d-flex align-items-center justify-content-center ">
+                                    <button
+                                        class="table__card-control-btn font-weight-bold position-relative">Узнать</button>
                                 </div>
                             </article>
                         </div>
@@ -648,16 +763,16 @@
                 </div>
             </div>
         </section>
-        <section id="trainers" class="trainers__section section">
+        <section id="trainers" class="trainers__section d-flex justify-content-center position-relative section">
 
-            <div class="trainers__container container slider">
+            <div class="trainers__container d-flex flex-column align-items-start container slider">
                 <div class="decor  decor-yellow decor-yellow-4"></div>
                 <div class="decor  decor-border decor-border-4"></div>
-                <div class="trainers__content  d-flex flex-column flex-md-row align-items-center">
-                    <h2 class="trainers__title">Тренеры</h2>
-                    <div class="trainers__slider slider__container">
-                        <ul class="trainers__slider-list slider__content">
-                            <li class="trainers__slider-item slide">
+                <div class="trainers__content w-100 d-flex flex-column flex-md-row align-items-center">
+                    <h2 class="trainers__title font-weight-bold">Тренеры</h2>
+                    <div class="trainers__slider w-100 position-relative slider__container">
+                        <ul class="trainers__slider-list d-flex align-items-start position-absolute slider__content">
+                            <li class="trainers__slider-item h-100 d-flex flex-column slide">
                                 <div class="slide__img">
                                     <img src="./styles/images/trainer1.png" alt="trainer1">
                                 </div>
@@ -668,7 +783,7 @@
                                     <li class="slide__description-item">Опыт работы — 4 года</li>
                                 </ul>
                             </li>
-                            <li class="trainers__slider-item">
+                            <li class="trainers__slider-item h-100 d-flex flex-column ">
                                 <div class="slide__img">
                                     <img src="./styles/images/trainer2.png" alt="trainer1">
                                 </div>
@@ -678,7 +793,7 @@
                                     <li class="slide__description-item">Опыт работы — 4 года</li>
                                 </ul>
                             </li>
-                            <li class="trainers__slider-item">
+                            <li class="trainers__slider-item h-100 d-flex flex-column ">
                                 <div class="slide__img">
                                     <img src="./styles/images/trainer3.png" alt="trainer1">
                                 </div>
@@ -688,7 +803,7 @@
                                     <li class="slide__description-item">Опыт работы — 4 года</li>
                                 </ul>
                             </li>
-                            <li class="trainers__slider-item">
+                            <li class="trainers__slider-item h-100 d-flex flex-column ">
                                 <div class="slide__img">
                                     <img src="./styles/images/trainer4.png" alt="trainer1">
                                 </div>
@@ -698,7 +813,7 @@
                                     <li class="slide__description-item">Опыт работы — 4 года</li>
                                 </ul>
                             </li>
-                            <li class="trainers__slider-item">
+                            <li class="trainers__slider-item h-100 d-flex flex-column ">
                                 <div class="slide__img">
                                     <img src="./styles/images/trainer1.png" alt="trainer1">
                                 </div>
@@ -709,7 +824,7 @@
                                     <li class="slide__description-item">Опыт работы — 4 года</li>
                                 </ul>
                             </li>
-                            <li class="trainers__slider-item">
+                            <li class="trainers__slider-item h-100 d-flex flex-column ">
                                 <div class="slide__img">
                                     <img src="./styles/images/trainer1.png" alt="trainer1">
                                 </div>
@@ -723,18 +838,20 @@
                         </ul>
                     </div>
                 </div>
-                <div class="trainers__range-container  d-flex d-md-none w-100">
-                    <input type="range" min="0" max="3" step="1" value="0" class="trainers__range slider__range">
+                <div class="trainers__range-container d-flex align-items-center justify-content-center d-md-none w-100">
+                    <input type="range" min="0" max="3" step="1" value="0" class="trainers__range slider__range w-100">
                 </div>
-                <div class="trainers__control slider__control d-none d-md-flex">
-                    <button class="trainers__control-btn slider__btn btn-left">
+                <div class="trainers__control w-100 d-none d-md-flex align-items-center justify-content-center ">
+                    <button
+                        class="trainers__control-btn slider__btn btn-left d-flex align-items-center justify-content-center ">
                         <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M37.5 22.0384C37.5 21.7069 37.3683 21.389 37.1339 21.1546C36.8994 20.9201 36.5815 20.7884 36.25 20.7884H6.76748L14.635 12.9234C14.7512 12.8072 14.8434 12.6693 14.9063 12.5174C14.9692 12.3656 15.0016 12.2028 15.0016 12.0384C15.0016 11.8741 14.9692 11.7113 14.9063 11.5595C14.8434 11.4076 14.7512 11.2697 14.635 11.1534C14.5188 11.0372 14.3808 10.945 14.2289 10.8821C14.0771 10.8192 13.9143 10.7869 13.75 10.7869C13.5856 10.7869 13.4229 10.8192 13.271 10.8821C13.1192 10.945 12.9812 11.0372 12.865 11.1534L2.86498 21.1534C2.74857 21.2696 2.65621 21.4075 2.59319 21.5594C2.53018 21.7112 2.49774 21.874 2.49774 22.0384C2.49774 22.2029 2.53018 22.3657 2.59319 22.5175C2.65621 22.6694 2.74857 22.8073 2.86498 22.9234L12.865 32.9234C12.9812 33.0397 13.1192 33.1319 13.271 33.1948C13.4229 33.2577 13.5856 33.29 13.75 33.29C13.9143 33.29 14.0771 33.2577 14.2289 33.1948C14.3808 33.1319 14.5188 33.0397 14.635 32.9234C14.7512 32.8072 14.8434 32.6693 14.9063 32.5174C14.9692 32.3656 15.0016 32.2028 15.0016 32.0384C15.0016 31.8741 14.9692 31.7113 14.9063 31.5595C14.8434 31.4076 14.7512 31.2697 14.635 31.1534L6.76748 23.2884H36.25C36.5815 23.2884 36.8994 23.1567 37.1339 22.9223C37.3683 22.6879 37.5 22.37 37.5 22.0384Z"
                                 fill="white" />
                         </svg>
                     </button>
-                    <button class="trainers__control-btn slider__btn btn-right">
+                    <button
+                        class="trainers__control-btn slider__btn btn-right d-flex align-items-center justify-content-center ">
                         <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M37.5 22.0384C37.5 21.7069 37.3683 21.389 37.1339 21.1546C36.8994 20.9201 36.5815 20.7884 36.25 20.7884H6.76748L14.635 12.9234C14.7512 12.8072 14.8434 12.6693 14.9063 12.5174C14.9692 12.3656 15.0016 12.2028 15.0016 12.0384C15.0016 11.8741 14.9692 11.7113 14.9063 11.5595C14.8434 11.4076 14.7512 11.2697 14.635 11.1534C14.5188 11.0372 14.3808 10.945 14.2289 10.8821C14.0771 10.8192 13.9143 10.7869 13.75 10.7869C13.5856 10.7869 13.4229 10.8192 13.271 10.8821C13.1192 10.945 12.9812 11.0372 12.865 11.1534L2.86498 21.1534C2.74857 21.2696 2.65621 21.4075 2.59319 21.5594C2.53018 21.7112 2.49774 21.874 2.49774 22.0384C2.49774 22.2029 2.53018 22.3657 2.59319 22.5175C2.65621 22.6694 2.74857 22.8073 2.86498 22.9234L12.865 32.9234C12.9812 33.0397 13.1192 33.1319 13.271 33.1948C13.4229 33.2577 13.5856 33.29 13.75 33.29C13.9143 33.29 14.0771 33.2577 14.2289 33.1948C14.3808 33.1319 14.5188 33.0397 14.635 32.9234C14.7512 32.8072 14.8434 32.6693 14.9063 32.5174C14.9692 32.3656 15.0016 32.2028 15.0016 32.0384C15.0016 31.8741 14.9692 31.7113 14.9063 31.5595C14.8434 31.4076 14.7512 31.2697 14.635 31.1534L6.76748 23.2884H36.25C36.5815 23.2884 36.8994 23.1567 37.1339 22.9223C37.3683 22.6879 37.5 22.37 37.5 22.0384Z"
@@ -744,21 +861,25 @@
                 </div>
             </div>
         </section>
-        <section class="questions__section section">
-            <div class="background questions__background">
-                <div class="questions__container container">
-                    <form class="questions__form form">
-                        <h4 class="form__title">Остались вопросы?</h4>
-                        <p class="form__description">Оставьте Ваш номер телефона
-                            и мы <span>обязательно с Вами свяжемся</span></p>
-                        <input type="text" name="firstname" class="form__input" placeholder="Введите имя">
-                        <input type="tel" name="phone" class="form__input" placeholder="Введите телефон">
+        <section class="questions__section section w-100 position-relative">
+            <div class="background questions__background w-100 h-100 position-absolute d-flex justify-content-center ">
+                <div class="questions__container container d-flex align-items-center justify-content-end ">
+                    <form class="questions__form form d-flex flex-column align-items-center">
+                        <h4 class="form__title font-weight-bold">Остались вопросы?</h4>
+                        <p class="form__description text-center font-weight-normal">Оставьте Ваш номер телефона
+                            и мы <span class="font-weight-normal">обязательно с Вами свяжемся</span></p>
+                        <input type="text" name="firstname" class="form__input w-100 font-weight-light"
+                            placeholder="Введите имя">
+                        <input type="tel" name="phone" class="form__input w-100 font-weight-light"
+                            placeholder="Введите телефон">
                         <div class="form__control">
-                            <button class="form__control-btn" data-toggle="modal" data-target="#modal">Получить
+                            <button class="form__control-btn font-weight-bold position-relative" data-toggle="modal"
+                                data-target="#modal">Получить
                                 консультацию</button>
                         </div>
-                        <div class="form__politic">
-                            <a href="" class="form__politic-text">Нажимая на кнопку вы соглашаетесь с политикой
+                        <div class="form__politic d-flex justify-content-center">
+                            <a href="" class="form__politic-text font-weight-light text-center">Нажимая на кнопку вы
+                                соглашаетесь с политикой
                                 конфиденциальности</a>
                         </div>
                     </form>
@@ -766,21 +887,22 @@
             </div>
 
         </section>
-        <section id="contacts" class="contacts__section section">
-            <div id="map"></div>
+        <section id="contacts"
+            class="contacts__section section w-100 position-relative d-flex align-items-center justify-content-center flex-column flex-sm-row">
+            <div id="map" class="w-100"></div>
             <div class="contacts__block">
-                <h3 class="contacts__title">Контакты</h3>
-                <ul class="contacts__list">
-                    <li class="contacts__item">
+                <h3 class="contacts__title font-weight-bold">Контакты</h3>
+                <ul class="contacts__list d-flex flex-column mt-5">
+                    <li class="contacts__item d-flex align-items-center">
                         <div class="contacts__item-icon"><svg width="18" height="24" viewBox="0 0 18 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M14.8435 2.06087C13.3565 0.730435 11.2696 0 8.99999 0C6.73043 0 4.64347 0.730435 3.15651 2.06087C1.33043 3.67826 0.391296 6.10435 0.391296 9.13043C0.391296 15.6783 7.93043 23.3739 8.26956 23.687C8.47825 23.8957 8.73912 24 8.99999 24C9.26086 24 9.54782 23.8957 9.73043 23.687C10.0696 23.3739 17.6087 15.6783 17.6087 9.13043C17.6087 6.10435 16.6696 3.67826 14.8435 2.06087ZM8.99999 21.4174C8.29564 20.6348 7.1739 19.3304 6.07825 17.7652C3.73043 14.4261 2.47825 11.4522 2.47825 9.13043C2.47825 2.6087 7.46086 2.08696 8.99999 2.08696C15.0522 2.08696 15.5217 7.48696 15.5217 9.13043C15.5217 13.7217 10.8522 19.3826 8.99999 21.4174ZM8.99999 4.51304C6.70434 4.51304 4.85217 6.41739 4.85217 8.73913C4.85217 11.0609 6.70434 12.9391 8.99999 12.9391C11.2956 12.9391 13.1478 11.0348 13.1478 8.71304C13.1478 6.3913 11.2956 4.51304 8.99999 4.51304ZM8.99999 11.113C7.72173 11.113 6.67825 10.0435 6.67825 8.71304C6.67825 7.38261 7.72173 6.31304 8.99999 6.31304C10.2783 6.31304 11.3217 7.38261 11.3217 8.71304C11.3217 10.0435 10.2783 11.113 8.99999 11.113Z"
                                     fill="#F7931E" />
                             </svg></div>
-                        <div class="contacts__item-text">г. Орехово-Зуево, ул. Ленина 84</div>
+                        <div class="contacts__item-text font-weight-light">г. Орехово-Зуево, ул. Ленина 84</div>
                     </li>
-                    <li class="contacts__item">
+                    <li class="contacts__item d-flex align-items-center">
                         <div class="contacts__item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_127_14)">
@@ -795,30 +917,31 @@
                                         fill="#F7931E" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_127_14">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
                             </svg></div>
-                        <div class="contacts__item-text">Ежедневно с 8:00 до 23:00
+                        <div class="contacts__item-text font-weight-light">Ежедневно с 8:00 до 23:00
                         </div>
                     </li>
-                    <li class="contacts__item">
+                    <li class="contacts__item d-flex align-items-center">
                         <div class="contacts__item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M22.9091 17.3673V20.64C22.9103 20.9438 22.8481 21.2446 22.7264 21.5229C22.6046 21.8013 22.4261 22.0512 22.2023 22.2566C21.9784 22.462 21.7141 22.6184 21.4263 22.7157C21.1385 22.813 20.8335 22.8492 20.5309 22.8218C17.174 22.4571 13.9494 21.31 11.1164 19.4727C8.48053 17.7978 6.24581 15.5631 4.5709 12.9273C2.72724 10.0813 1.57989 6.8411 1.22181 3.46911C1.19455 3.16744 1.2304 2.86339 1.32708 2.57633C1.42376 2.28928 1.57916 2.0255 1.78337 1.80179C1.98758 1.57807 2.23614 1.39934 2.51321 1.27695C2.79029 1.15456 3.08981 1.09121 3.39272 1.09093H6.66544C7.19487 1.08572 7.70813 1.27319 8.10955 1.61842C8.51097 1.96364 8.77316 2.44305 8.84726 2.96729C8.98581 4.01456 9.24108 5.04329 9.6109 6.03274C9.75767 6.42321 9.78944 6.84756 9.70243 7.25552C9.61543 7.66348 9.41329 8.03796 9.11999 8.33456L7.73453 9.72002C9.2875 12.4512 11.5488 14.7125 14.28 16.2655L15.6654 14.88C15.962 14.5867 16.3365 14.3846 16.7445 14.2976C17.1524 14.2106 17.5768 14.2423 17.9673 14.3891C18.9567 14.7589 19.9854 15.0142 21.0327 15.1527C21.5626 15.2275 22.0466 15.4944 22.3926 15.9027C22.7385 16.3111 22.9224 16.8323 22.9091 17.3673Z"
                                     stroke="#F7931E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg></div>
-                        <div class="contacts__item-text"><a href="tel:+74964161916">+7 (496) 416-19-16</a>,<br>
+                        <div class="contacts__item-text font-weight-light"><a href="tel:+74964161916">+7 (496)
+                                416-19-16</a>,<br>
                             <a href="tel:+79258812170">+7 (925) 881-21-70</a>
                         </div>
                     </li>
                 </ul>
                 <div class="contacts__social">
-                    <p class="contacts__social-text">Подписывайтесь на наши соц.сети
+                    <p class="contacts__social-text font-weight-normal">Подписывайтесь на наши соц.сети
                     </p>
-                    <ul class="contacts__social-list">
+                    <ul class="contacts__social-list d-flex align-items-center">
                         <li class="contacts__social-item"><a href="" class="contacts__social-link instagram"><svg
                                     width="23" height="22" viewBox="0 0 23 22" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -842,23 +965,23 @@
         </section>
     </main>
 
-    <footer class="foot">
-        <div class="foot__container container d-flex flex-column">
-            <div class="foot__menu d-flex flex-column  flex-md-row">
+    <footer class="foot d-flex justify-content-center">
+        <div class="foot__container container d-flex flex-column justify-content-between">
+            <div class="foot__menu d-flex flex-column flex-md-row justify-content-between">
                 <div
-                    class="foot__logo-container navbar navbar-expand-md navbar-dark d-flex flex-row flex-md-column justify-content-between">
+                    class="foot__logo-container navbar navbar-expand-md navbar-dark d-flex flex-row flex-md-column align-items-center justify-content-between">
                     <div class="foot__logo">
                         <a href="" class="logo__link">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="168" height="50" viewBox="0 0 168 50">
-                                <image id="logo" width="168" height="50"
+                                <image width="168" height="50"
                                     xlink:href="data:img/png;base64,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" />
                             </svg>
 
                         </a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="nav toggle">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent-1"
+                        aria-controls="navContent-1" aria-expanded="false" aria-label="nav toggle">
                         <span class="toggler-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="16px">
                                 <path fill-rule="evenodd" fill="#FFFFFF"
@@ -869,10 +992,9 @@
                                     d="M-0.000,14.000 L17.000,14.000 L17.000,16.000 L-0.000,16.000 L-0.000,14.000 Z" />
                             </svg></span>
                     </button>
-                    <div class="collapse navbar-collapse w-100 flex-column align-items-center mt-5 mt-md-0"
-                        id="navContent">
-                        <ul class="head__navigation-list navbar-nav d-flex d-md-none flex-row justify-content-center ">
-                            <div class="head__navigation-list head__navigation-column">
+                    <div class="collapse navbar-collapse w-100 mt-5 mt-md-0" id="navContent-1">
+                        <div class="head__navigation-list navbar-nav d-flex d-md-none flex-row justify-content-center ">
+                            <ul class="head__navigation-list head__navigation-column">
                                 <li class="head__navigation-item nav-item">
                                     <a href="#about" class="head__navigation-link link">О нас</a>
                                 </li>
@@ -882,10 +1004,9 @@
                                 <li class="head__navigation-item nav-item">
                                     <a href="#subscriptions" class="head__navigation-link link">Абонементы</a>
                                 </li>
-                            </div>
+                            </ul>
 
-
-                            <div class="head__navigation-list head__navigation-column">
+                            <ul class="head__navigation-list head__navigation-column">
                                 <li class="head__navigation-item nav-item">
                                     <a href="#trainers" class="head__navigation-link link">Тренеры</a>
                                 </li>
@@ -897,68 +1018,76 @@
                                         +7 (496) 416-19-16
                                     </a>
                                 </li>
-                            </div>
-                        </ul>
-                        <ul class="head__navigation-list head__navigation-column d-flex d-md-none mt-5">
-                            <li class="head__navigation-item nav-item">
+                            </ul>
+                        </div>
+                        <ul class="head__navigation-list head__navigation-column d-flex d-md-none mt-3">
+                            <li class=" head__navigation-item nav-item ml-auto">
                                 <a href="#subscriptions-months" class="head__navigation-link link">Абонемент по
                                     времени</a>
                             </li>
-                            <li class="head__navigation-item nav-item">
+                            <li class="head__navigation-item nav-item mr-auto">
                                 <a href="#subscriptions-one-time" class="head__navigation-link link">Разовые
                                     тренировки</a>
                             </li>
                         </ul>
                     </div>
                     <div class="foot__copyrait d-none d-md-block">
-                        <p class="foot__copyrait-text"><span>©</span> <span>Все права защищены</span></p>
-                        <p class="foot__copyrait-text">Орехово-Зуево, 2013-2022</p>
+                        <p class="foot__copyrait-text font-weight-light mt-3"><span class="font-weight-light">©</span>
+                            <span class="font-weight-light">Все права
+                                защищены</span>
+                        </p>
+                        <p class="foot__copyrait-text font-weight-light mt-3">Орехово-Зуево, 2013-2022</p>
                     </div>
                 </div>
-                <div class="foot__site-map site-map d-none d-md-block">
-                    <ul class="site-map__nav-list d-flex flex-column flex-lg-row">
+                <div class="foot__site-map site-map d-none d-md-block w-100">
+                    <ul
+                        class="site-map__nav-list w-100 d-flex flex-column flex-lg-row align-items-start justify-content-between">
                         <li class="site-map__nav-item">
-                            <ul class="site-map__list">
-                                <li class="site-map__item">
-                                    <a href="#about" class="site-map__link link">О нас</a>
+                            <ul class="site-map__list d-flex flex-column">
+                                <li class="site-map__item font-weight-light">
+                                    <a href="#about" class="site-map__link font-weight-light link">О нас</a>
                                 </li>
-                                <li class="site-map__item">
-                                    <a href="#gallery" class="site-map__link link">Галерея</a>
+                                <li class="site-map__item font-weight-light">
+                                    <a href="#gallery" class="site-map__link font-weight-light link">Галерея</a>
                                 </li>
-                                <li class="site-map__item">
-                                    <a href="#subscriptions" class="site-map__link link">Абонементы</a>
+                                <li class="site-map__item font-weight-light">
+                                    <a href="#subscriptions"
+                                        class="site-map__link font-weight-light link">Абонементы</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="site-map__nav-item">
-                            <ul class="site-map__list">
-                                <li class="site-map__item">
-                                    <a href="#trainers" class="site-map__link link">Тренеры</a>
+                            <ul class="site-map__list d-flex flex-column">
+                                <li class="site-map__item font-weight-light">
+                                    <a href="#trainers" class="site-map__link font-weight-light link">Тренеры</a>
                                 </li>
-                                <li class="site-map__item">
-                                    <a href="#contacts" class="site-map__link link">Контакты</a>
+                                <li class="site-map__item font-weight-light">
+                                    <a href="#contacts" class="site-map__link font-weight-light link">Контакты</a>
                                 </li>
 
                             </ul>
                         </li>
                         <li class="site-map__nav-item">
-                            <ul class="site-map__list">
-                                <li class="site-map__item">
-                                    <a href="#subscriptions" class="site-map__link link">Абонементы</a>
+                            <ul class="site-map__list d-flex flex-column">
+                                <li class="site-map__item font-weight-light">
+                                    <a href="#subscriptions"
+                                        class="site-map__link font-weight-light link">Абонементы</a>
                                 </li>
-                                <li class="site-map__item">
-                                    <a href="#subscriptions-months" class="site-map__link link">Абонемент по времени</a>
+                                <li class="site-map__item font-weight-light">
+                                    <a href="#subscriptions-months"
+                                        class="site-map__link font-weight-light link">Абонемент по времени</a>
                                 </li>
-                                <li class="site-map__item">
-                                    <a href="#subscriptions-one-time" class="site-map__link link">Разовые тренировки</a>
+                                <li class="site-map__item font-weight-light">
+                                    <a href="#subscriptions-one-time"
+                                        class="site-map__link font-weight-light link">Разовые тренировки</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="site-map__nav-item d-none d-xl-block">
-                            <ul class="site-map__list">
-                                <li class="site-map__item">Наши соц.сети</li>
-                                <li class="site-map__item">
-                                    <div class="site-map__social">
+                            <ul class="site-map__list d-flex flex-column">
+                                <li class="site-map__item font-weight-light">Наши соц.сети</li>
+                                <li class="site-map__item font-weight-light">
+                                    <div class="site-map__social d-flex align-items-center ">
                                         <a href="" class="site-map__social-link">
                                             <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -981,17 +1110,17 @@
                     </ul>
                 </div>
                 <div class="foot__contacts">
-                    <ul class="foot__contacts-list">
-                        <li class="foot__contacts-item">г. Орехово-Зуево, ул. Ленина 84</li>
-                        <li class="foot__contacts-item">Ежедневно с 8:00 до 23:00</li>
+                    <ul class="foot__contacts-list d-flex flex-column">
+                        <li class="foot__contacts-item font-weight-light">г. Орехово-Зуево, ул. Ленина 84</li>
+                        <li class="foot__contacts-item font-weight-light">Ежедневно с 8:00 до 23:00</li>
                         <li class="foot__contacts-item"><a href="tel:+74964161916">+7 (496) 416-19-16</a>, <a
                                 href="tel:+79258812170">+7
                                 (925) 881-21-70</a></li>
                         <li class="foot__contacts-item"><a href="">Политика конфиденциальности</a></li>
                         <li class="site-map__nav-item d-block d-xl-none">
-                            <ul class="site-map__list d-flex flex-column">
-                                <li class="site-map__item">Наши соц.сети</li>
-                                <li class="site-map__item">
+                            <ul class="site-map__list d-flex flex-column d-flex flex-column">
+                                <li class="site-map__item font-weight-light">Наши соц.сети</li>
+                                <li class="site-map__item font-weight-light">
                                     <div class="site-map__social">
                                         <a href="" class="site-map__social-link">
                                             <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
@@ -1017,8 +1146,9 @@
                 </div>
             </div>
             <div class="foot__copyrait d-block d-md-none">
-                <p class="foot__copyrait-text"><span>©</span> <span>Все права защищены</span></p>
-                <p class="foot__copyrait-text">Орехово-Зуево, 2013-2022</p>
+                <p class="foot__copyrait-text font-weight-light mt-3"><span class="font-weight-light">©</span> <span
+                        class="font-weight-light">Все права защищены</span></p>
+                <p class="foot__copyrait-text font-weight-light mt-3">Орехово-Зуево, 2013-2022</p>
             </div>
         </div>
     </footer>

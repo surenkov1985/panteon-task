@@ -5,7 +5,7 @@ $(document).ready(function () {
 	let windowHeight = $(window).innerHeight();
 	let documentPosition = $(document).scrollTop();
 
-	if ($(".head").height === windowHeight && $(document).scrollTop() < windowHeight / 2) {
+	if ($(".head").height() === windowHeight && $(document).scrollTop() < windowHeight / 2) {
 		$("html, body").animate(
 			{
 				scrollTop: 0,
@@ -18,7 +18,7 @@ $(document).ready(function () {
 		);
 	}
 
-	if ($(".head").height === windowHeight && $(document).scrollTop() < windowHeight && $(document).scrollTop() > windowHeight / 2) {
+	if ($(".head").height() === windowHeight && $(document).scrollTop() < windowHeight && $(document).scrollTop() > windowHeight / 2) {
 		$("html, body").animate(
 			{
 				scrollTop: windowHeight,
@@ -35,7 +35,7 @@ $(document).ready(function () {
 		if (animated) return;
 		let scrollTop = $(document).scrollTop();
 
-		if ($(".head").height === windowHeight && documentPosition === 0 && scrollTop > documentPosition) {
+		if ($(".head").height() === windowHeight && documentPosition === 0 && scrollTop > documentPosition) {
 			animated = true;
 			$("html, body").animate(
 				{
@@ -49,7 +49,7 @@ $(document).ready(function () {
 			);
 		}
 
-		if ($(".head").height === windowHeight && documentPosition === windowHeight && scrollTop < documentPosition) {
+		if ($(".head").height() === windowHeight && documentPosition === windowHeight && scrollTop < documentPosition) {
 			animated = true;
 			$("html, body").animate(
 				{

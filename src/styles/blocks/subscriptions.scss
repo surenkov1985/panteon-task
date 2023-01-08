@@ -3,7 +3,26 @@
 .subscriptions {
 
     &__section {
-        position: relative;
+        background: #FFFFFF;
+    }
+
+    &__container {
+        padding: 100px 140px;
+
+        @media (max-width: 991px) {
+            padding: 100px 0;
+        }
+    }
+
+    &__title {
+        color: $DarkTextColor;
+        font-size: 1.875rem;
+    }
+
+    &__table-title {
+        margin-top: 90px;
+        color: $DarkTextColor;
+        font-size: 1.5rem;
     }
 
     &__range {
@@ -26,12 +45,6 @@
             cursor: pointer;
             margin-top: -3px;
         }
-
-        &-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
     }
 
     &__table {
@@ -39,7 +52,6 @@
         overflow-x: hidden;
 
         &-container {
-            width: 100%;
             overflow-x: hidden;
         }
 
@@ -48,41 +60,26 @@
             & .table {
                 margin-top: 80px;
                 width: max-content;
-                overflow: hidden;
 
                 &__head {
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
                     border-bottom: 1px solid rgba(12, 20, 23, 0.5);
-
-                    @media (max-width: 767px) {
-                        justify-content: flex-start;
-                    }
 
                     &-cell {
                         width: 210px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         color: $DarkTextColor;
-                        padding-bottom: 15px;
 
                         @media (max-width: 991px) {
-                            padding-left: 15px;
                             width: 160px;
                         }
 
                         & span {
                             color: $DarkTextColor;
-                            font-size: 18px;
+                            font-size: 1.125rem;
                             line-height: 24px;
                             white-space: nowrap;
-                            font-weight: $BoldWeight;
 
                             @media (max-width: 767px) {
-                                font-size: 16px;
+                                font-size: 1rem;
                             }
                         }
                     }
@@ -103,12 +100,12 @@
 
                         & span {
                             color: $DarkTextColor;
-                            font-size: 18px;
+                            font-size: 1.125rem;
                             line-height: 24px;
                             white-space: nowrap;
 
                             @media (max-width: 767px) {
-                                font-size: 16px;
+                                font-size: 1rem;
                             }
                         }
                     }
@@ -116,14 +113,6 @@
 
                 &__body {
                     margin-top: 40px;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-
-                    @media (max-width: 767px) {
-                        justify-content: flex-start;
-                    }
 
                     &:hover {
                         & .table__body-head-cell {
@@ -135,8 +124,6 @@
 
                     &-head-cell {
                         width: 260px;
-                        display: flex;
-                        align-items: center;
 
                         @media (max-width: 991px) {
                             padding-left: 15px;
@@ -155,28 +142,21 @@
 
                         & span {
                             color: $DarkTextColor;
-                            font-weight: $BoldWeight;
-                            font-size: 16px;
+                            font-size: 1rem;
                             line-height: 24px;
 
                             @media (max-width: 767px) {
-                                font-size: 14px;
+                                font-size: 0.875rem;
                             }
                         }
                     }
 
-
-
                     &-cell {
                         height: 100%;
                         width: 210px;
-                        text-align: center;
                         vertical-align: middle;
                         cursor: pointer;
                         transition: all 0.2s;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
 
                         @media (max-width: 991px) {
                             width: 160px;
@@ -188,7 +168,7 @@
 
                         & span {
                             color: $DarkTextColor;
-                            font-size: 16px;
+                            font-size: 1rem;
                             line-height: 24px;
                             max-width: 170px;
                         }
@@ -214,27 +194,17 @@
             & .table {
                 margin-top: 80px;
                 width: 100%;
-                overflow: hidden;
 
                 @media (max-width: 767px) {
                     width: max-content;
                 }
 
                 &__head {
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
                     border-bottom: 1px solid rgba(12, 20, 23, 0.5);
 
                     &-cell {
-                        width: 100%;
                         width: 170px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         color: $DarkTextColor;
-                        padding-bottom: 15px;
 
                         @media (max-width: 991px) {
                             width: 130px;
@@ -242,13 +212,12 @@
 
                         & span {
                             color: $DarkTextColor;
-                            font-size: 18px;
+                            font-size: 1.125rem;
                             line-height: 24px;
                             white-space: nowrap;
-                            font-weight: $BoldWeight;
 
                             @media (max-width: 767px) {
-                                font-size: 16px;
+                                font-size: 1rem;
                             }
                         }
 
@@ -262,10 +231,8 @@
                     &-col-cell {
                         width: 330px;
                         color: $DarkTextColor;
-                        padding-bottom: 15px;
 
                         @media (max-width: 991px) {
-                            padding-left: 15px;
                             width: 250px;
                         }
 
@@ -275,12 +242,12 @@
 
                         & span {
                             color: $DarkTextColor;
-                            font-size: 18px;
+                            font-size: 1.125rem;
                             line-height: 24px;
                             white-space: nowrap;
 
                             @media (max-width: 767px) {
-                                font-size: 16px;
+                                font-size: 1rem;
                             }
                         }
                     }
@@ -288,10 +255,6 @@
 
                 &__body {
                     margin-top: 40px;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
 
                     &:hover {
                         & .table__body-head-cell {
@@ -303,11 +266,8 @@
 
                     &-head-cell {
                         width: 330px;
-                        display: flex;
-                        align-items: center;
 
                         @media (max-width: 991px) {
-                            padding: 15px;
                             width: 250px;
                         }
 
@@ -323,32 +283,24 @@
 
                         & span {
                             color: $DarkTextColor;
-                            font-weight: $BoldWeight;
-                            font-size: 16px;
+                            font-size: 1rem;
                             line-height: 24px;
 
                             @media (max-width: 767px) {
-                                font-size: 14px;
+                                font-size: 0.875rem;
                             }
                         }
                     }
 
                     &-cell {
-                        height: 100%;
-                        width: 100%;
                         width: 170px;
-                        text-align: center;
                         vertical-align: middle;
                         cursor: pointer;
                         transition: all 0.2s;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
 
                         & span {
                             color: $DarkTextColor;
-                            font-size: 16px;
+                            font-size: 1rem;
                             line-height: 24px;
                             width: 100%;
                         }
@@ -365,16 +317,6 @@
                             & .table__body-head-cell {
                                 & span {
                                     color: $ButtonColor;
-                                }
-                            }
-                        }
-
-                        &.col-1 {
-                            &:hover {
-                                & .table__head-cell {
-                                    & span {
-                                        color: $ButtonColor;
-                                    }
                                 }
                             }
                         }
@@ -395,20 +337,13 @@
 
                 &__card {
                     min-width: 226px;
-                    height: 100%;
                     padding: 30px 20px;
                     background: #FFFFFF;
                     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
 
                     &-title {
-                        font-weight: $BoldWeight;
-                        font-size: 1.6rem;
+                        font-size: 1rem;
                         color: $DarkTextColor;
-                        text-align: center;
                         transition: all 0.2s;
                     }
 
@@ -423,9 +358,7 @@
                     }
 
                     &-time {
-                        font-size: 1.5rem;
-                        text-align: center;
-                        font-weight: $LightWeigth;
+                        font-size: 0.9rem;
                         color: rgba(12, 20, 23, 0.5);
                         margin-top: 20px;
                     }
@@ -438,34 +371,25 @@
                         margin-top: 15px;
 
                         & span {
-                            font-weight: $BoldWeight;
-                            font-size: 3rem;
+                            font-size: 1.875rem;
                             color: $DarkTextColor;
                         }
-
                     }
 
                     &-numb {
-                        font-size: 1.5rem;
-                        text-align: center;
-                        font-weight: $LightWeigth;
+                        font-size: 0.9rem;
                         color: rgba(12, 20, 23, 0.5);
                         margin-top: 15px;
                     }
 
                     &-control {
                         margin-top: 30px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
 
                         &-btn {
                             padding: 17px 40px;
                             min-width: 200px;
                             color: $ButtonColor;
-                            font-size: 1.6rem;
-                            font-weight: $BoldWeight;
-                            position: relative;
+                            font-size: 1rem;
                             cursor: pointer;
                             z-index: 1;
 
@@ -501,427 +425,4 @@
             }
         }
     }
-
-    &__section {
-        width: 100%;
-        background: #FFFFFF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__container {
-        padding: 100px 140px;
-
-        @media (max-width: 991px) {
-            padding: 100px 0;
-        }
-    }
-
-    &__title {
-        color: $DarkTextColor;
-        font-size: 3rem;
-        font-weight: $BoldWeight;
-        text-align: center;
-    }
-
-    &__table-title {
-        margin-top: 90px;
-        color: $DarkTextColor;
-        font-size: 2.4rem;
-        font-weight: $BoldWeight;
-        text-align: center;
-    }
 }
-
-// .table {
-
-//     &.subscriptions__table-all {
-//         margin-top: 80px;
-
-//         &.table {
-
-//             &__head {
-//                 width: 100%;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: space-between;
-//                 border-bottom: 1px solid rgba(12, 20, 23, 0.5);
-
-//                 &-cell {
-//                     min-width: 210px;
-//                     display: flex;
-//                     align-items: center;
-//                     justify-content: center;
-//                     color: $DarkTextColor;
-//                     padding-bottom: 15px;
-
-//                     & span {
-//                         color: $DarkTextColor;
-//                         font-size: 18px;
-//                         line-height: 24px;
-//                         white-space: nowrap;
-//                         font-weight: $BoldWeight;
-//                     }
-
-//                     &.col-1 {
-//                         & .table__body-cell.col-1:hover {
-//                             color: $ButtonColor;
-//                         }
-//                     }
-//                 }
-
-//                 &-col-cell {
-//                     width: 260px;
-//                     color: $DarkTextColor;
-//                     padding-bottom: 15px;
-
-//                     & span {
-//                         color: $DarkTextColor;
-//                         font-size: 18px;
-//                         line-height: 24px;
-//                         white-space: nowrap;
-//                     }
-//                 }
-//             }
-
-//             &__body {
-//                 margin-top: 40px;
-//                 width: 100%;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: space-between;
-
-//                 &:hover {
-//                     & .table__body-head-cell {
-//                         & span {
-//                             color: $ButtonColor;
-//                         }
-//                     }
-//                 }
-
-//                 &-head-cell {
-//                     width: 260px;
-//                     display: flex;
-//                     align-items: center;
-
-//                     &:hover {
-//                         & span {
-//                             color: $DarkTextColor !important;
-//                         }
-//                     }
-
-//                     & span {
-//                         color: $DarkTextColor;
-//                         font-weight: $BoldWeight;
-//                         font-size: 16px;
-//                         line-height: 24px;
-//                     }
-//                 }
-
-
-
-//                 &-cell {
-//                     height: 100%;
-//                     min-width: 210px;
-//                     text-align: center;
-//                     vertical-align: middle;
-//                     cursor: pointer;
-//                     transition: all 0.2s;
-//                     display: flex;
-//                     align-items: center;
-//                     justify-content: center;
-
-//                     & span {
-//                         color: $DarkTextColor;
-//                         font-size: 16px;
-//                         line-height: 24px;
-//                         max-width: 170px;
-//                     }
-
-//                     &:hover {
-//                         & span {
-//                             font-weight: $SemiBoldWeigth;
-//                         }
-
-//                         & .table__body-head-cell {
-//                             & span {
-//                                 color: $ButtonColor;
-//                             }
-//                         }
-//                     }
-
-//                     &.col-1 {
-//                         &:hover {
-//                             & .table__head-cell {
-//                                 & span {
-//                                     color: $ButtonColor;
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-
-
-//     &.subscriptions__table-months {
-//         margin-top: 80px;
-
-//         &__head {
-//             width: 100%;
-//             display: flex;
-//             align-items: center;
-//             justify-content: space-between;
-//             border-bottom: 1px solid rgba(12, 20, 23, 0.5);
-
-//             &-cell {
-//                 width: 100%;
-//                 max-width: 170px;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-//                 color: $DarkTextColor;
-//                 padding-bottom: 15px;
-
-//                 & span {
-//                     color: $DarkTextColor;
-//                     font-size: 18px;
-//                     line-height: 24px;
-//                     white-space: nowrap;
-//                     font-weight: $BoldWeight;
-//                 }
-
-//                 &.col-1 {
-//                     & .table__body-cell.col-1:hover {
-//                         color: $ButtonColor;
-//                     }
-//                 }
-//             }
-
-//             &-col-cell {
-//                 width: 310px;
-//                 color: $DarkTextColor;
-//                 padding-bottom: 15px;
-
-//                 & span {
-//                     color: $DarkTextColor;
-//                     font-size: 18px;
-//                     line-height: 24px;
-//                     white-space: nowrap;
-//                 }
-//             }
-//         }
-
-//         &__body {
-//             margin-top: 40px;
-//             width: 100%;
-//             display: flex;
-//             align-items: center;
-//             justify-content: space-between;
-
-//             &:hover {
-//                 & .table__body-head-cell {
-//                     & span {
-//                         color: $ButtonColor;
-//                     }
-//                 }
-//             }
-
-//             &-head-cell {
-//                 width: 310px;
-//                 display: flex;
-//                 align-items: center;
-
-//                 &:hover {
-//                     & span {
-//                         color: $DarkTextColor !important;
-//                     }
-//                 }
-
-//                 & span {
-//                     color: $DarkTextColor;
-//                     font-weight: $BoldWeight;
-//                     font-size: 16px;
-//                     line-height: 24px;
-//                 }
-//             }
-
-
-
-//             &-cell {
-//                 height: 100%;
-//                 width: 100%;
-//                 max-width: 170px;
-//                 text-align: center;
-//                 vertical-align: middle;
-//                 cursor: pointer;
-//                 transition: all 0.2s;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-
-//                 & span {
-//                     color: $DarkTextColor;
-//                     font-size: 16px;
-//                     line-height: 24px;
-//                     max-width: 170px;
-//                 }
-
-//                 &:hover {
-//                     & span {
-//                         font-weight: $SemiBoldWeigth;
-//                     }
-
-//                     & .table__body-head-cell {
-//                         & span {
-//                             color: $ButtonColor;
-//                         }
-//                     }
-//                 }
-
-//                 &.col-1 {
-//                     &:hover {
-//                         & .table__head-cell {
-//                             & span {
-//                                 color: $ButtonColor;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// .subscriptions__table-all {
-//     & .table {
-//         margin-top: 80px;
-
-//         &__head {
-//             width: 100%;
-//             display: flex;
-//             align-items: center;
-//             justify-content: space-between;
-//             border-bottom: 1px solid rgba(12, 20, 23, 0.5);
-
-//             &-cell {
-//                 min-width: 210px;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-//                 color: $DarkTextColor;
-//                 padding-bottom: 15px;
-
-//                 & span {
-//                     color: $DarkTextColor;
-//                     font-size: 18px;
-//                     line-height: 24px;
-//                     white-space: nowrap;
-//                     font-weight: $BoldWeight;
-//                 }
-
-//                 &.col-1 {
-//                     & .table__body-cell.col-1:hover {
-//                         color: $ButtonColor;
-//                     }
-//                 }
-//             }
-
-//             &-col-cell {
-//                 width: 260px;
-//                 color: $DarkTextColor;
-//                 padding-bottom: 15px;
-
-//                 & span {
-//                     color: $DarkTextColor;
-//                     font-size: 18px;
-//                     line-height: 24px;
-//                     white-space: nowrap;
-//                 }
-//             }
-//         }
-
-//         &__body {
-//             margin-top: 40px;
-//             width: 100%;
-//             display: flex;
-//             align-items: center;
-//             justify-content: space-between;
-
-//             &:hover {
-//                 & .table__body-head-cell {
-//                     & span {
-//                         color: $ButtonColor;
-//                     }
-//                 }
-//             }
-
-//             &-head-cell {
-//                 width: 260px;
-//                 display: flex;
-//                 align-items: center;
-
-//                 &:hover {
-//                     & span {
-//                         color: $DarkTextColor !important;
-//                     }
-//                 }
-
-//                 & span {
-//                     color: $DarkTextColor;
-//                     font-weight: $BoldWeight;
-//                     font-size: 16px;
-//                     line-height: 24px;
-//                 }
-//             }
-
-
-
-//             &-cell {
-//                 height: 100%;
-//                 min-width: 210px;
-//                 text-align: center;
-//                 vertical-align: middle;
-//                 cursor: pointer;
-//                 transition: all 0.2s;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-
-//                 & span {
-//                     color: $DarkTextColor;
-//                     font-size: 16px;
-//                     line-height: 24px;
-//                     max-width: 170px;
-//                 }
-
-//                 &:hover {
-//                     & span {
-//                         font-weight: $SemiBoldWeigth;
-//                     }
-
-//                     // & .table__body-head-cell {
-//                     //     color: $ButtonColor;
-//                     // }
-//                     & .table__body-head-cell {
-//                         & span {
-//                             color: $ButtonColor;
-//                         }
-//                     }
-//                 }
-
-//                 &.col-1 {
-//                     &:hover {
-//                         & .table__head-cell {
-//                             & span {
-//                                 color: $ButtonColor;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }

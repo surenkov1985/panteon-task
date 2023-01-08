@@ -1,15 +1,9 @@
 @import "../mixins/button.scss";
 
 .promo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
 
     &__container {
         padding: 100px 30px 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         row-gap: 80px;
 
         @media (max-width: 1080px) {
@@ -57,8 +51,7 @@
     &__content {
 
         &-title {
-            font-weight: $BoldWeight;
-            font-size: 3rem;
+            font-size: 1.875rem;
             margin-top: 70px;
 
             @media (max-width: 768px) {
@@ -66,14 +59,12 @@
             }
 
             @media (max-width: 500px) {
-                font-size: 2.5rem;
+                font-size: 1.56rem;
             }
         }
 
         &-text {
-            font-size: 1.6rem;
-            font-weight: $LightWeigth;
-            margin-top: 50px;
+            font-size: 1rem;
         }
 
         &-control {
@@ -81,10 +72,8 @@
         }
 
         &-btn {
-            position: relative;
             @include button;
             margin-left: 10px;
-
 
             &::before {
                 content: "";
@@ -99,7 +88,6 @@
                     background: $ButtonColor;
                 }
             }
-
         }
     }
 
@@ -120,16 +108,13 @@
             }
 
             & p {
-                font-size: 1.7rem;
-                font-weight: $RegWeigth;
+                font-size: 1.06rem;
                 line-height: 28px;
             }
 
             &>svg {
-                width: 100px;
                 min-width: 57px;
             }
         }
     }
-
 }
