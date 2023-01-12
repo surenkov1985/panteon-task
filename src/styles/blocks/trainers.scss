@@ -124,6 +124,13 @@
             font-size: 0.9rem;
             font-weight: $LightWeigth;
             color: rgba($color: $TextColor, $alpha: 0.5);
+
+            & p {
+                font-size: 0.9rem;
+                font-weight: $LightWeigth;
+                color: rgba($color: $TextColor, $alpha: 0.5);
+                line-height: 2rem;
+            }
         }
     }
 
